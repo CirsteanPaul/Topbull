@@ -1,13 +1,16 @@
-import { useEffect } from 'react';
+/* eslint-disable consistent-return */
+import { useEffect, useMemo } from 'react';
 import Web3Modal from 'web3modal';
-import { useAppDispatch } from '../store';
-import { setBlockchainWeb3ModalAction } from '../store/actions/blockchain-actions';
-import { disconnect } from '../utils/disconnectWeb3';
+import { useAppDispatch, useAppSelector } from '../store';
+import { blockchainDisconnectAsyncAction, setBlockchainWeb3ModalAction, updateBlockchainAccountActionAsync } from '../store/actions/blockchain-actions';
+import { blockchainProviderSelector } from '../store/selectors/blockchain-selectors';
 import { addMetamaskIfMissing, providerOptions } from '../utils/providerOptions';
 
 const useWeb3Modal = () => {
   const dispatch = useAppDispatch();
-  console.log('Intra');
+  const provider = useAppSelector(blockchainProviderSelector);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const customProvider = useMemo(() => provider as unknown as any, [provider]);
   useEffect(() => {
     addMetamaskIfMissing();
     localStorage.clear();
@@ -18,36 +21,32 @@ const useWeb3Modal = () => {
     });
     dispatch(setBlockchainWeb3ModalAction(web3Modal));
   }, [dispatch]);
-  // eslint-disable-next-line consistent-return
-  //   useEffect(() => {
-  //     if (provider?.on) {
-  //       const handleAccountsChanged = (accounts: string[]) => {
-  //         console.log('accountsChanged', accounts);
-  //         // dispatch(updateAccountRequest(accounts[0]));
-  //       };
+  useEffect(() => {
+    if (customProvider?.on) {
+      const handleAccountsChanged = (accounts: string[]) => {
+        dispatch(updateBlockchainAccountActionAsync(accounts));
+      };
 
-  //       const handleChainChanged = () => {
-  //         console.log('disconnect');
-  //         disconnect();
-  //       };
+      const handleChainChanged = () => {
+        dispatch(blockchainDisconnectAsyncAction());
+      };
 
-  //       const handleDisconnect = () => {
-  //         console.log('disconnect');
-  //         disconnect(web3);
-  //       };
+      const handleDisconnect = async () => {
+        dispatch(blockchainDisconnectAsyncAction());
+      };
 
-  //       provider.on('accountsChanged', handleAccountsChanged);
-  //       provider.on('chainChanged', handleChainChanged);
-  //       provider.on('disconnect', handleDisconnect);
+      customProvider.on('accountsChanged', handleAccountsChanged);
+      customProvider.on('chainChanged', handleChainChanged);
+      customProvider.on('disconnect', handleDisconnect);
 
-  //       return () => {
-  //         if (provider.removeListener) {
-  //           provider.removeListener('accountsChanged', handleAccountsChanged);
-  //           provider.removeListener('chainChanged', handleChainChanged);
-  //           provider.removeListener('disconnect', handleDisconnect);
-  //         }
-  //       };
-  //     }
-  //   }, [provider]);
+      return () => {
+        if (customProvider.removeListener) {
+          customProvider.removeListener('accountsChanged', handleAccountsChanged);
+          customProvider.removeListener('chainChanged', handleChainChanged);
+          customProvider.removeListener('disconnect', handleDisconnect);
+        }
+      };
+    }
+  }, [provider, dispatch, customProvider]);
 };
 export default useWeb3Modal;

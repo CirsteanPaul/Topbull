@@ -1,4 +1,6 @@
+/* eslint-disable consistent-return */
 import { motion } from 'framer-motion/dist/framer-motion';
+import Config from './config';
 import useWeb3Modal from './hooks/useWeb3Modal';
 import { useAppDispatch } from './store';
 import { fecthBlockchainDataActionAsync } from './store/actions/blockchain-actions';
@@ -24,6 +26,21 @@ const App = () => {
       <Container>
         test
         <button type="button" onClick={handleClick}>
+          Connect
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            const wind = window.open(Config.metamaskLink, 'popup', 'width=1 height = 1');
+            wind?.close();
+          }}
+        >
+          Popup
+        </button>
+        <button type="button" onClick={() => window.open(Config.metamaskLink, '_system')}>
+          System
+        </button>
+        <button type="button" onClick={() => window.open(Config.metamaskLink)}>
           Connect
         </button>
       </Container>

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './theme/styled';
 import defaultTheme from './theme/default-theme';
 import store from './store';
+import './theme/reset.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(

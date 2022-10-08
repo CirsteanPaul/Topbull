@@ -1,20 +1,21 @@
 import WalletConnect from '@walletconnect/web3-provider';
 import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
 import { providers } from 'web3modal';
+import Config from '../config';
 
-const infuraKey = '5d5a998bf5c8471b90f9cd03561adf5b';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const providerOptions: any = {
   walletlink: {
-    package: CoinbaseWalletSDK, // Required
+    package: CoinbaseWalletSDK,
     options: {
-      appName: 'TopBull', // Required
-      infuraId: infuraKey, // Required unless you provide a JSON RPC url; see `rpc` below
+      appName: 'TopBull',
+      infuraId: Config.infuraKey,
     },
   },
   walletconnect: {
-    package: WalletConnect, // required
+    package: WalletConnect,
     options: {
-      infuraId: infuraKey, // required
+      infuraId: Config.infuraKey,
     },
     rpc: {
       1: 'https://main‑light.eth.linkpool.io',
@@ -27,13 +28,12 @@ export const addMetamaskIfMissing = () => {
     providerOptions['custom-metamask'] = {
       display: {
         logo: providers.METAMASK.logo,
-        name: 'Install MetaMask',
+        name: 'MetaMask',
         description: 'Connect using browser wallet',
       },
       package: {},
       connector: async () => {
-        window.open('https://metamask.io/download/');
-        // throw new Error('MetaMask not installed');
+        window.open(Config.metamaskLink);
       },
     };
   }
