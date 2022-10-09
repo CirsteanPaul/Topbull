@@ -17,10 +17,14 @@ type fontSize = {
   small: string;
   large: string;
   xxLarge: string;
+  gigant: string;
+  xGigant: string;
 };
 type fonts = {
   normal: string;
+  roboto: string;
   regular: string;
+  aldrich: string;
   bold: string;
   light: string;
 };

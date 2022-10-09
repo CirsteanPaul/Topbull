@@ -18,6 +18,8 @@ const defaultTheme: ITheme = {
     regular: 'Outfit Regular',
     bold: 'Outfit Bold',
     light: 'Outfit Light',
+    roboto: 'Roboto',
+    aldrich: 'Aldrich',
   },
   fontSize: {
     medium: '22px',
@@ -25,7 +27,9 @@ const defaultTheme: ITheme = {
     large: '30px',
     xLarge: '38px',
     small: '18px',
-    xSmall: '10px',
+    xSmall: '12px',
+    gigant: '56px',
+    xGigant: '64px',
   },
 };
 export default defaultTheme;

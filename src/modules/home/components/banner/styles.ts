@@ -7,12 +7,12 @@ export const BannerContainer = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(${bannerImage});
-  height: 700px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media screen and (max-width: 512px) {
-    align-items: center;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
   }
 `;
 
@@ -20,72 +20,89 @@ export const BannerInformation = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 80%;
+  width: 88%;
+  max-width: 800px;
   padding: 0 80px;
   padding-right: 10px;
-  @media screen and (max-width: 768px) {
-    width: 90%;
-    padding: 0 20px;
+  @media screen and (min-width: 1412px) {
+    max-width: 1200px;
   }
-  @media screen and (max-width: 512px) {
-    align-items: center;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 60px;
+    padding-right: 10px;
+  }
+  @media screen and (max-width: 492px) {
+    padding: 0 25px;
+    padding-right: 0;
   }
   @media screen and (max-width: 312px) {
     align-items: center;
     width: 100%;
+    padding: 0 20px;
+    padding-right: 10px;
   }
 `;
 
 export const BannerTitle = styled.h1`
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   width: 100%;
   color: ${props => props.theme.colors.textWhite};
-  font-family: ${props => props.theme.fonts.regular};
-  font-size: ${props => props.theme.fontSize.xxLarge};
+  font-family: ${props => props.theme.fonts.aldrich};
+  font-weight: 400;
+  font-size: ${props => props.theme.fontSize.gigant};
+
+  @media screen and (min-width: 1412px) {
+    font-size: ${props => props.theme.fontSize.xGigant};
+  }
   @media screen and (max-width: 768px) {
-    font-size: ${props => props.theme.fontSize.large};
+    width: 88%;
   }
   @media screen and (max-width: 512px) {
-    text-align: center;
-    align-self: center;
-    flex-direction: column;
-    font-size: ${props => props.theme.fontSize.medium};
+    width: 93%;
+    font-size: ${props => props.theme.fontSize.xLarge};
   }
   @media screen and (max-width: 312px) {
-    font-size: ${props => props.theme.fontSize.small};
+    font-size: ${props => props.theme.fontSize.large};
   }
 `;
 
 export const BannerTitleHighlighted = styled.span`
-  padding: 0 8px;
   color: ${props => props.theme.colors.primary};
-  font-family: ${props => props.theme.fonts.bold};
-  font-size: ${props => props.theme.fontSize.xxLarge};
-  @media screen and (max-width: 768px) {
-    font-size: ${props => props.theme.fontSize.large};
+  font-family: ${props => props.theme.fonts.aldrich};
+  font-size: ${props => props.theme.fontSize.gigant};
+  @media screen and (min-width: 1412px) {
+    font-size: ${props => props.theme.fontSize.xGigant};
   }
   @media screen and (max-width: 512px) {
-    text-align: center;
-    font-size: ${props => props.theme.fontSize.medium};
+    font-size: ${props => props.theme.fontSize.xLarge};
   }
   @media screen and (max-width: 312px) {
-    font-size: ${props => props.theme.fontSize.small};
-    padding: 0 4px;
+    font-size: ${props => props.theme.fontSize.large};
   }
 `;
 
 export const BannerText = styled.h4`
   color: ${props => props.theme.colors.textWhite};
-  font-family: ${props => props.theme.fonts.regular};
-  font-size: ${props => props.theme.fontSize.medium};
+  font-family: ${props => props.theme.fonts.aldrich};
+  font-size: ${props => props.theme.fontSize.small};
   width: 60%;
+  padding-left: 4px;
+  @media screen and (min-width: 1412px) {
+    width: 40%;
+    font-size: ${props => props.theme.fontSize.medium};
+  }
   @media screen and (max-width: 768px) {
-    font-size: ${props => props.theme.fontSize.small};
+    width: 75%;
   }
   @media screen and (max-width: 512px) {
-    text-align: center;
     width: 90%;
+  }
+  @media screen and (max-width: 312px) {
+    padding: 0 8px;
+    width: 100%;
   }
 `;
 
@@ -98,7 +115,12 @@ export const BannerButtonsWrapper = styled.div`
     gap: 16px;
   }
   @media screen and (max-width: 512px) {
+    flex-direction: row;
+    gap: 16px;
+  }
+  @media screen and (max-width: 414px) {
     flex-direction: column;
+    padding-right: 20px;
     gap: 16px;
   }
 `;
@@ -123,9 +145,12 @@ export const BannerButton = styled.button<{ isHighlighted?: boolean }>`
   }
   font-size: ${props => props.theme.fontSize.small};
   @media screen and (max-width: 768px) {
-    font-size: ${props => props.theme.fontSize.xSmall};
-    padding: ${props => (props.isHighlighted ? '10px 12px' : '10px 28px')};
+    padding: ${props => (props.isHighlighted ? '16px 20px' : '16px 36px')};
+    font-size: ${props => props.theme.fontSize.small};
 
-    border-radius: 16px;
+    border-radius: 8px;
+  }
+  @media screen and (max-width: 334px) {
+    font-size: ${props => props.theme.fontSize.small};
   }
 `;

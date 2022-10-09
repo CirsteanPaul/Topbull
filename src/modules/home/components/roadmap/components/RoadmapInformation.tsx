@@ -13,7 +13,7 @@ const RoadmapInformation = (props: IRoadmapInformationProps): JSX.Element => {
   const { index } = props;
   const buildBubble = () => {
     if (align === Alignment.right) {
-      return <BubbleEdge title={`Q${index}`} />;
+      return <BubbleEdge title={`Q${index + 1}`} />;
     }
     return <BubbleEdge title={`Q${index + 1}`} isLeft />;
   };

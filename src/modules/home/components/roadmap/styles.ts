@@ -40,8 +40,8 @@ export const RoadmapTitle = styled.h1`
 export const RoadmapInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 80px;
   @media screen and (max-width: 768px) {
-    gap: 12px;
+    gap: 32px;
   }
 `;
