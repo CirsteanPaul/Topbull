@@ -22,11 +22,17 @@ export const RoadmapTitle = styled.h1`
   color: ${props => props.theme.colors.primary};
   font-size: ${props => props.theme.fontSize.xxLarge};
   font-family: ${props => props.theme.fonts.bold};
+  text-transform: uppercase;
   margin-bottom: 40px;
   position: relative;
   width: 100%;
   @media screen and (max-width: 768px) {
     font-size: ${props => props.theme.fontSize.large};
+    padding: 0 12px;
+    margin-bottom: 32px;
+  }
+  @media screen and (max-width: 312px) {
+    font-size: ${props => props.theme.fontSize.medium};
     padding: 0 12px;
     margin-bottom: 32px;
   }

@@ -1,6 +1,6 @@
 import styled from '../../theme';
 
-export const HomeContainer = styled.div`
+export const HomeContainer = styled.main`
   width: 100%;
   display: flex;
   flex-direction: column;

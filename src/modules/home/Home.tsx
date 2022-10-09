@@ -1,11 +1,11 @@
-import React from 'react';
-import BubbleEdge from '../../components/bubble-edge';
+import Banner from './components/banner';
 import Roadmap from './components/roadmap';
 import { HomeContainer } from './styles';
 
 const Home = (): JSX.Element => {
   return (
     <HomeContainer>
+      <Banner />
       <Roadmap />
     </HomeContainer>
   );
