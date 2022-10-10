@@ -2,7 +2,13 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { ethers } from 'ethers';
 import Web3Modal from 'web3modal';
-import { setBlockchainAccountAction, setBlockchainProviderAction, setBlockchainLoadingAction, setBlockchainWeb3ModalAction } from '../actions/blockchain-actions';
+import {
+  setBlockchainAccountAction,
+  setBlockchainIsConnectedAction,
+  setBlockchainProviderAction,
+  setBlockchainLoadingAction,
+  setBlockchainWeb3ModalAction,
+} from '../actions/blockchain-actions';
 
 interface State {
   loading: boolean;
@@ -36,6 +42,7 @@ const blockchainReducer = createReducer(initialState, builder =>
     .addCase(setBlockchainWeb3ModalAction, (state, action) => ({ ...state, web3Modal: action.payload }))
     .addCase(setBlockchainProviderAction, (state, action) => ({ ...state, provider: action.payload }))
     .addCase(setBlockchainLoadingAction, (state, action) => ({ ...state, loading: action.payload }))
+    .addCase(setBlockchainIsConnectedAction, (state, action) => ({ ...state, isConnected: action.payload }))
     .addCase(setBlockchainAccountAction, (state, action) => ({ ...state, account: action.payload })),
 );
 export default blockchainReducer;

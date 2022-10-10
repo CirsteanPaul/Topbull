@@ -27,6 +27,7 @@ type fonts = {
   regular: string;
   aldrich: string;
   bold: string;
+  extraBold: string;
   light: string;
 };
 

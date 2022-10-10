@@ -12,6 +12,9 @@ export const EbContainer = styled.div`
 
   align-items: center;
   padding: 30px 20px;
+  @media screen and (max-width: 312px) {
+    gap: 120px;
+  }
 `;
 
 export const EbTextSection = styled.div`
@@ -20,40 +23,41 @@ export const EbTextSection = styled.div`
   text-transform: uppercase;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   width: 80%;
   @media screen and (max-width: 768px) {
     width: 90%;
+  }
+  @media screen and (max-width: 312px) {
+    margin: 0;
   }
 `;
 
 export const EbText = styled.h5`
   color: ${props => props.theme.colors.textWhite};
-  font-family: ${props => props.theme.fonts.regular};
-  font-size: ${props => props.theme.fontSize.medium};
+  font-family: ${props => props.theme.fonts.bold};
+  font-size: ${props => props.theme.fontSize.small};
   @media screen and (max-width: 512px) {
-    font-size: ${props => props.theme.fontSize.small};
-    text-align: center;
-  }
-  @media screen and (max-width: 312px) {
     font-size: ${props => props.theme.fontSize.xSmall};
+    text-align: center;
   }
 `;
 
 export const EbTitle = styled.h1`
   color: ${props => props.theme.colors.textWhite};
-  font-family: ${props => props.theme.fonts.bold};
+  font-family: ${props => props.theme.fonts.extraBold};
   letter-spacing: 4px;
-  font-size: ${props => props.theme.fontSize.xxLarge};
+  font-size: ${props => props.theme.fontSize.gigant};
   @media screen and (max-width: 768px) {
     font-size: ${props => props.theme.fontSize.xLarge};
   }
   @media screen and (max-width: 512px) {
-    font-size: ${props => props.theme.fontSize.medium};
+    font-size: ${props => props.theme.fontSize.large};
     letter-spacing: 2px;
+    text-align: center;
   }
   @media screen and (max-width: 312px) {
-    font-size: ${props => props.theme.fontSize.small};
+    font-size: ${props => props.theme.fontSize.medium};
     text-align: center;
   }
 `;

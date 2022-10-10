@@ -16,6 +16,7 @@ const defaultTheme: ITheme = {
   fonts: {
     normal: 'Outfit',
     regular: 'Outfit Regular',
+    extraBold: 'Outfit ExtraBold',
     bold: 'Outfit Bold',
     light: 'Outfit Light',
     roboto: 'Roboto',

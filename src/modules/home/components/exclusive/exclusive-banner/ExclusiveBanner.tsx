@@ -14,7 +14,7 @@ const ExclusiveBanner = (): JSX.Element => {
       </EbTextSection>
       <EbCardsContainer>
         {exclusiveCards.map(card => (
-          <EbCard {...card} />
+          <EbCard key={card.title} {...card} />
         ))}
       </EbCardsContainer>
     </EbContainer>

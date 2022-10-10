@@ -8,10 +8,7 @@ import { RoadmapContainer, RoadmapInfoContainer, RoadmapTitle } from './styles';
 const Roadmap = (): JSX.Element => {
   return (
     <RoadmapContainer>
-      <RoadmapTitle>
-        <BackgroundMatrix left="0" top="0" />
-        Roadmap
-      </RoadmapTitle>
+      <RoadmapTitle>Roadmap</RoadmapTitle>
       <RoadmapInfoContainer>
         {RoadMapData.map((data, idx) => (
           <RoadmapInformation key={data.title} index={idx} data={data} />

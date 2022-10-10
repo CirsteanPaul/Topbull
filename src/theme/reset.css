@@ -13,6 +13,10 @@
     src: url("./../fonts/Outfit-Bold.ttf") format("truetype");
 }
 @font-face {
+  font-family: "Outfit ExtraBold";
+  src: url("./../fonts/Outfit-ExtraBold.ttf") format("truetype");
+}
+@font-face {
     font-family: "Outfit Light";
     src: url("./../fonts/Outfit-Light.ttf") format("truetype");
 }

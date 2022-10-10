@@ -4,8 +4,7 @@ import bgImage from './bg-lines.png';
 export const RoadmapContainer = styled.section`
   display: flex;
   flex-direction: column;
-  background-position: right;
-  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(${bgImage});

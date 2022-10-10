@@ -6,6 +6,7 @@ export const EbCardContainer = styled.article`
   background-color: ${props => props.theme.colors.white};
   display: flex;
   flex-direction: column;
+  max-width: 400px;
   align-items: center;
   padding: 20px;
   padding-top: 70px;
