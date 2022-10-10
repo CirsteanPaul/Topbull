@@ -1,5 +1,6 @@
 import styled from '../../theme';
-import { BUBBLE_WIDTH_LARGE, BUBBLE_WIDTH_MEDIUM, BUBBLE_WIDTH_SMALL } from '../../constants/styles-constants';
+import { BUBBLE_WIDTH_LARGE, BUBBLE_WIDTH_MEDIUM, BUBBLE_WIDTH_SMALL, BUBBLE_WIDTH_XSMALL } from '../../constants/styles-constants';
+import BubbleEdge from './BubbleEdge';
 
 export const BeImageLayoutLeft = styled.div`
   height: 220px;
@@ -21,9 +22,13 @@ export const BeImageLayoutLeft = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: ${BUBBLE_WIDTH_SMALL}px;
-    height: 60px;
+    height: 110px;
   }
-  @media screen and (max-width: 312px) {
+  @media screen and (max-width: 400px) {
+    width: ${BUBBLE_WIDTH_XSMALL}px;
+    height: 90px;
+  }
+  @media screen and (max-width: 380px) {
     display: none;
   }
 `;
@@ -35,7 +40,10 @@ export const BeTextLeft = styled.p`
     font-size: ${props => props.theme.fontSize.gigant};
   }
   @media screen and (max-width: 768px) {
-    font-size: ${props => props.theme.fontSize.medium};
+    font-size: ${props => props.theme.fontSize.xLarge};
+  }
+  @media screen and (max-width: 400px) {
+    font-size: ${props => props.theme.fontSize.large};
   }
 `;
 export const BeImageLayoutRight = styled.div`
@@ -57,9 +65,13 @@ export const BeImageLayoutRight = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: ${BUBBLE_WIDTH_SMALL}px;
-    height: 60px;
+    height: 110px;
   }
-  @media screen and (max-width: 312px) {
+  @media screen and (max-width: 400px) {
+    width: ${BUBBLE_WIDTH_XSMALL}px;
+    height: 90px;
+  }
+  @media screen and (max-width: 380px) {
     display: none;
   }
 `;

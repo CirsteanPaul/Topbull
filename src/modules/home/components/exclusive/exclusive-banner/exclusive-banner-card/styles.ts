@@ -14,9 +14,11 @@ export const EbCardContainer = styled.article`
   position: relative;
   @media screen and (max-width: 768px) {
     gap: 15px;
-    padding: 20px 20px;
+    padding: 25px;
     padding-top: 50px;
+    min-height: 140px;
     gap: 4px;
+    flex: 0;
   }
 `;
 export const EbcTitle = styled.h5`
@@ -43,18 +45,19 @@ export const EbcImage = styled.img`
   object-fit: cover;
   height: 150px;
   position: absolute;
-  top: -55%;
+  top: -120px;
   left: 50%;
   transform: translateX(-50%);
-  @media screen and (max-width: 1150px) {
-    top: -40%;
-  }
-  @media screen and (max-width: 1000px) {
-    top: -30%;
-    height: 110px;
+  @media screen and (max-width: 1950px) {
+    top: -90px;
+    height: 120px;
   }
   @media screen and (max-width: 768px) {
-    top: -40%;
-    height: 70px;
+    top: -120px;
+    height: 150px;
+  }
+  @media screen and (max-width: 312px) {
+    top: -80px;
+    height: 100px;
   }
 `;

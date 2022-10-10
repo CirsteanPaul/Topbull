@@ -61,4 +61,11 @@ export const EbTitle = styled.h1`
 export const EbCardsContainer = styled.div`
   display: flex;
   gap: 32px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 140px;
+  }
+  @media screen and (max-width: 312px) {
+    gap: 100px;
+  }
 `;

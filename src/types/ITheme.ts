@@ -15,6 +15,7 @@ type fontSize = {
   xLarge: string;
   xSmall: string;
   small: string;
+  mSmall: string;
   large: string;
   xxLarge: string;
   gigant: string;

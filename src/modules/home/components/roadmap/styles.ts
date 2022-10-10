@@ -13,7 +13,7 @@ export const RoadmapContainer = styled.section`
   margin-top: 44px;
   margin-bottom: 20px;
   @media screen and (max-width: 768px) {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 `;
 export const RoadmapTitle = styled.h1`
@@ -23,16 +23,17 @@ export const RoadmapTitle = styled.h1`
   font-size: ${props => props.theme.fontSize.xxLarge};
   font-family: ${props => props.theme.fonts.bold};
   text-transform: uppercase;
+  letter-spacing: 1.4px;
   margin-bottom: 40px;
   position: relative;
   width: 100%;
   @media screen and (max-width: 768px) {
-    font-size: ${props => props.theme.fontSize.large};
+    font-size: ${props => props.theme.fontSize.xLarge};
     padding: 0 12px;
-    margin-bottom: 32px;
+    margin-bottom: 52px;
   }
   @media screen and (max-width: 312px) {
-    font-size: ${props => props.theme.fontSize.medium};
+    font-size: ${props => props.theme.fontSize.large};
     padding: 0 12px;
     margin-bottom: 32px;
   }
@@ -42,6 +43,6 @@ export const RoadmapInfoContainer = styled.div`
   flex-direction: column;
   gap: 80px;
   @media screen and (max-width: 768px) {
-    gap: 32px;
+    gap: 48px;
   }
 `;

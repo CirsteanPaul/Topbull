@@ -1,4 +1,4 @@
-import { BUBBLE_WIDTH_LARGE, BUBBLE_WIDTH_SMALL } from '../../../../../constants/styles-constants';
+import { BUBBLE_WIDTH_LARGE, BUBBLE_WIDTH_MEDIUM, BUBBLE_WIDTH_SMALL, BUBBLE_WIDTH_XSMALL } from '../../../../../constants/styles-constants';
 import styled, { css } from '../../../../../theme';
 
 export const RiContainer = styled.article<{ isRight?: boolean }>`
@@ -14,14 +14,40 @@ export const RiContainer = styled.article<{ isRight?: boolean }>`
       text-align: right;
       align-items: flex-end;
     `}
+  @media screen and (max-width: 924px) {
+    padding: 0 ${BUBBLE_WIDTH_MEDIUM + 30}px;
+  }
   @media screen and (max-width: 768px) {
     padding: 0 ${BUBBLE_WIDTH_SMALL + 20}px;
     gap: 24px;
   }
-  @media screen and (max-width: 512px) {
-    align-items: center;
+  @media screen and (max-width: 768px) {
+    ${props =>
+      props.isRight &&
+      css`
+        padding-left: 30px;
+      `}
+    ${props =>
+      !props.isRight &&
+      css`
+        padding-right: 30px;
+      `}
+    gap: 24px;
   }
-  @media screen and (max-width: 312px) {
+  @media screen and (max-width: 400px) {
+    padding: 0 ${BUBBLE_WIDTH_XSMALL + 20}px;
+    ${props =>
+      props.isRight &&
+      css`
+        padding-left: 16px;
+      `}
+    ${props =>
+      !props.isRight &&
+      css`
+        padding-right: 16px;
+      `}
+  }
+  @media screen and (max-width: 380px) {
     align-items: center;
     text-align: center;
     padding: 0 15px;
@@ -33,12 +59,9 @@ export const RiTitle = styled.h2`
   font-family: ${props => props.theme.fonts.bold};
   text-transform: uppercase;
   @media screen and (max-width: 924px) {
-    font-size: ${props => props.theme.fontSize.large};
-  }
-  @media screen and (max-width: 768px) {
     font-size: ${props => props.theme.fontSize.medium};
   }
-  @media screen and (max-width: 312px) {
+  @media screen and (max-width: 512px) {
     font-size: ${props => props.theme.fontSize.small};
   }
 `;
@@ -48,4 +71,7 @@ export const RiText = styled.p`
   font-family: ${props => props.theme.fonts.light};
   text-transform: uppercase;
   color: ${props => props.theme.colors.white};
+  @media screen and (max-width: 550px) {
+    font-size: ${props => props.theme.fontSize.mSmall};
+  }
 `;

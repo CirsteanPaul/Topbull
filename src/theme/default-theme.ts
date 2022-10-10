@@ -28,6 +28,7 @@ const defaultTheme: ITheme = {
     xLarge: '38px',
     small: '18px',
     xSmall: '12px',
+    mSmall: '14px',
     gigant: '56px',
     xGigant: '64px',
   },

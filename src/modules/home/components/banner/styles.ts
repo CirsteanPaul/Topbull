@@ -72,6 +72,7 @@ export const BannerTitle = styled.h1`
 export const BannerTitleHighlighted = styled.span`
   color: ${props => props.theme.colors.primary};
   font-family: ${props => props.theme.fonts.aldrich};
+  font-weight: 400;
   font-size: ${props => props.theme.fontSize.gigant};
   @media screen and (min-width: 1412px) {
     font-size: ${props => props.theme.fontSize.xGigant};
