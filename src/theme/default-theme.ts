@@ -12,6 +12,7 @@ const defaultTheme: ITheme = {
     backgroundBlue: '#6a6d9e1a',
     darkRed: '#812F2F',
     white: '#fff',
+    gray: '#FFCBCB',
   },
   fonts: {
     normal: 'Outfit',

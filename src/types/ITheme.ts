@@ -7,6 +7,7 @@ type colors = {
   mediumRed: string;
   backgroundBlue: string;
   darkRed: string;
+  gray: string;
   textWhite: string;
   white: string;
 };

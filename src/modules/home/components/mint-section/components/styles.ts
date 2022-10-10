@@ -129,8 +129,11 @@ export const McButtonsSection = styled.section<{ isConnect?: boolean }>`
     gap: 15px;
   }
   @media screen and (max-width: 830px) {
-    margin: 0 20px;
+    padding: 0 10px;
     margin-top: 10px;
+  }
+  @media screen and (max-width: 368px) {
+    min-width: 170px;
   }
 `;
 export const McmdpLabel = styled.h3`

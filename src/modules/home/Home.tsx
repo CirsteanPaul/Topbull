@@ -1,3 +1,4 @@
+import Footer from '../../components/footer';
 import Banner from './components/banner';
 import Exclusive from './components/exclusive';
 import MintSection from './components/mint-section';
@@ -11,6 +12,7 @@ const Home = (): JSX.Element => {
       <Exclusive />
       <MintSection />
       <Roadmap />
+      <Footer />
     </HomeContainer>
   );
 };

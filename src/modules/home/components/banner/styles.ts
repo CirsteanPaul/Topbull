@@ -1,5 +1,6 @@
 import styled from '../../../../theme';
-import bannerImage from './banner-image.png';
+import bannerImage from './banner-image.jpeg';
+import bannerImagePhone from './banner-image.jpg';
 
 export const BannerContainer = styled.section`
   background-position: center;
@@ -14,6 +15,9 @@ export const BannerContainer = styled.section`
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
+  /* @media screen and (max-width: 500px) {
+    background-image: url(${bannerImagePhone});
+  } */
 `;
 
 export const BannerInformation = styled.div`
@@ -57,6 +61,10 @@ export const BannerTitle = styled.h1`
   @media screen and (min-width: 1412px) {
     font-size: ${props => props.theme.fontSize.xGigant};
   }
+  @media screen and (max-width: 1100px) {
+    color: ${props => props.theme.colors.gray};
+    text-shadow: 1px 1px black;
+  }
   @media screen and (max-width: 768px) {
     width: 88%;
   }
@@ -94,6 +102,10 @@ export const BannerText = styled.h4`
   @media screen and (min-width: 1412px) {
     width: 40%;
     font-size: ${props => props.theme.fontSize.medium};
+  }
+  @media screen and (max-width: 1100px) {
+    text-shadow: 0.3px 0.5px black;
+    color: ${props => props.theme.colors.gray};
   }
   @media screen and (max-width: 768px) {
     width: 75%;

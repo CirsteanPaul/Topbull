@@ -50,7 +50,11 @@ export const EbcImage = styled.img`
   left: 50%;
   transform: translateX(-50%);
   @media screen and (max-width: 1950px) {
-    top: -90px;
+    top: -160px;
+    height: 200px;
+  }
+  @media screen and (max-width: 1150px) {
+    top: -100px;
     height: 120px;
   }
   @media screen and (max-width: 768px) {
