@@ -5,6 +5,7 @@ export const EbContainer = styled.div`
   background: linear-gradient(180deg, #df4d4d 0%, #8c2323 100%);
   border-radius: 30px;
   display: flex;
+  position: relative;
   gap: 180px;
   flex-direction: column;
   width: 100%;

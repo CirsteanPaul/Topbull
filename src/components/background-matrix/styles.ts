@@ -11,9 +11,9 @@ export const BmContainer = styled.div<{ top?: string; left?: string; bottom?: st
   gap: 2px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 `;
-export const BmBox = styled.div`
-  width: 8px;
-  height: 8px;
+export const BmBox = styled.div<{ scaled?: boolean }>`
+  width: ${props => (props.scaled ? '16px' : '8px')};
+  height: ${props => (props.scaled ? '16px' : '8px')};
   background-color: ${props => props.theme.colors.backgroundBlue};
   border-radius: 50%;
   @media screen and (max-width: 768px) {

@@ -1,23 +1,25 @@
 import styled from '../../../../theme';
 import bannerImage from './banner-image.jpeg';
 import bannerImagePhone from './banner-image.jpg';
+import bannerGif from './banner-gif.gif';
 
 export const BannerContainer = styled.section`
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(${bannerImage});
+  background-image: url(${bannerGif});
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   @media screen and (max-width: 768px) {
     justify-content: center;
+    background-attachment: initial;
   }
-  /* @media screen and (max-width: 500px) {
+  @media screen and (max-width: 500px) {
     background-image: url(${bannerImagePhone});
-  } */
+  }
 `;
 
 export const BannerInformation = styled.div`

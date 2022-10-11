@@ -3,5 +3,6 @@ interface IBackgroundMatrixProps {
   left?: string;
   right?: string;
   bottom?: string;
+  scaled?: boolean;
 }
 export default IBackgroundMatrixProps;
