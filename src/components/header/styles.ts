@@ -93,6 +93,22 @@ export const InsideLink = styled(Scroll.Link).attrs(props => ({
     color: ${props => props.theme.colors.primary};
   }
 `;
+export const NavLink = styled(Scroll.Link).attrs(props => ({
+  spy: true,
+  activeClass: `color:${props.theme.colors.primary}`,
+  offset: -50,
+  smooth: 'easeInOutQuint',
+  duratioon: 500,
+}))`
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: ${props => props.theme.fontSize.mSmall};
+  color: ${props => props.theme.colors.white};
+  &:hover {
+    cursor: pointer;
+    color: ${props => props.theme.colors.primary};
+  }
+`;
 export const HeaderMobileMenu = styled.nav<{ isOpen?: boolean }>`
   position: fixed;
   top: 0;

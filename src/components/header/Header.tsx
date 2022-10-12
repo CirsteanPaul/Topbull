@@ -12,6 +12,7 @@ import {
   HeaderNavIconTwitter,
   HeaderTitle,
   InsideLink,
+  NavLink,
 } from './styles';
 import './styles.css';
 
@@ -72,11 +73,11 @@ const Header = (): JSX.Element => {
         <HeaderTitle isRed>Bull</HeaderTitle>
       </HeaderLeftSection>
       <HeaderNavContainer>
-        <InsideLink to="banner">Home</InsideLink>
-        <InsideLink to="exclusive">Overview</InsideLink>
-        <InsideLink to="mint">Mint</InsideLink>
-        <InsideLink to="roadmap">Roadmap</InsideLink>
-        <InsideLink to="faq">Faq</InsideLink>
+        <NavLink to="banner">Home</NavLink>
+        <NavLink to="exclusive">Overview</NavLink>
+        <NavLink to="mint">Mint</NavLink>
+        <NavLink to="roadmap">Roadmap</NavLink>
+        <NavLink to="faq">Faq</NavLink>
         <HeaderNavIconTwitter onClick={handleOpenTwitter} src="assets/twitter.png" />
         <HeaderNavIconDiscord onClick={handleOpenDiscord} src="assets/discord-black.png" />
       </HeaderNavContainer>
