@@ -1,13 +1,8 @@
 import styled from '../../../../theme';
-import bgImage from './bg-lines.png';
 
 export const RoadmapContainer = styled.section`
   display: flex;
   flex-direction: column;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(${bgImage});
   align-items: center;
   margin-top: 44px;
   margin-bottom: 20px;

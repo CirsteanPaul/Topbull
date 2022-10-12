@@ -27,7 +27,7 @@ const Footer = (): JSX.Element => {
       <BackgroundMatrix top="-200px" left="0" />
       <FooterWrapper>
         <FooterLogo>
-          <FooterLogoImg src="assets/footer-logo.png" />
+          <FooterLogoImg src="assets/logo-silver.png" />
           <FooterLogoTitle>topbull</FooterLogoTitle>
         </FooterLogo>
         <FooterCopyRight>Copyright © 2022 TOPBULL All rights reserved.</FooterCopyRight>

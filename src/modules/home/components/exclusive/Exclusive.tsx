@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import ExclusiveBanner from './exclusive-banner';
 import { ExclusiveBubble, ExclusiveBubblesWrapper, ExclusiveContainer, ExclusiveTextTitle, ExclusiveTextWrapper } from './styles';
 
@@ -14,7 +15,9 @@ const Exclusive = () => {
         <ExclusiveBubble />
         <ExclusiveBubble />
       </ExclusiveBubblesWrapper>
-      <ExclusiveBanner />
+      <Element name="exclusive">
+        <ExclusiveBanner />
+      </Element>
     </ExclusiveContainer>
   );
 };

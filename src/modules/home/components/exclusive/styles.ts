@@ -5,7 +5,7 @@ export const ExclusiveContainer = styled.section`
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  margin: 50px 0;
+  margin: 70px 0;
   padding: 0 40px;
   @media screen and (max-width: 768px) {
     padding: 0 20px;

@@ -47,9 +47,7 @@ const MintCard = (props: IMintCardProps): JSX.Element => {
             -
           </McSub>
           <McValue>{amount}</McValue>
-          <McAdd disabled={amount === 2} onClick={handleAddAmount}>
-            +
-          </McAdd>
+          <McAdd onClick={handleAddAmount}>+</McAdd>
         </McSection>
       </>
     );

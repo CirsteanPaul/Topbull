@@ -1,6 +1,4 @@
 import styled from '../../../../theme';
-import bannerImage from './banner-image.jpeg';
-import bannerImagePhone from './banner-image.jpg';
 import bannerGif from './banner-gif.gif';
 
 export const BannerContainer = styled.section`
@@ -11,14 +9,12 @@ export const BannerContainer = styled.section`
   background-image: url(${bannerGif});
   height: 100vh;
   display: flex;
+  padding-top: 30px;
   flex-direction: column;
   justify-content: center;
   @media screen and (max-width: 768px) {
     justify-content: center;
     background-attachment: initial;
-  }
-  @media screen and (max-width: 500px) {
-    background-image: url(${bannerImagePhone});
   }
 `;
 
@@ -58,10 +54,10 @@ export const BannerTitle = styled.h1`
   color: ${props => props.theme.colors.textWhite};
   font-family: ${props => props.theme.fonts.aldrich};
   font-weight: 400;
-  font-size: ${props => props.theme.fontSize.gigant};
+  font-size: ${props => props.theme.fontSize.xxLarge};
 
   @media screen and (min-width: 1412px) {
-    font-size: ${props => props.theme.fontSize.xGigant};
+    font-size: ${props => props.theme.fontSize.xxLarge};
   }
   @media screen and (max-width: 1100px) {
     color: ${props => props.theme.colors.gray};
@@ -83,9 +79,9 @@ export const BannerTitleHighlighted = styled.span`
   color: ${props => props.theme.colors.primary};
   font-family: ${props => props.theme.fonts.aldrich};
   font-weight: 400;
-  font-size: ${props => props.theme.fontSize.gigant};
+  font-size: ${props => props.theme.fontSize.xxLarge};
   @media screen and (min-width: 1412px) {
-    font-size: ${props => props.theme.fontSize.xGigant};
+    font-size: ${props => props.theme.fontSize.xxLarge};
   }
   @media screen and (max-width: 512px) {
     font-size: ${props => props.theme.fontSize.xLarge};

@@ -1,4 +1,6 @@
+import { Element } from 'react-scroll';
 import Footer from '../../components/footer';
+import Header from '../../components/header';
 import Banner from './components/banner';
 import Exclusive from './components/exclusive';
 import LifeTime from './components/life-time';
@@ -9,11 +11,18 @@ import { HomeContainer } from './styles';
 const Home = (): JSX.Element => {
   return (
     <HomeContainer>
-      <Banner />
+      <Header />
+      <Element name="banner">
+        <Banner />
+      </Element>
       <Exclusive />
       <LifeTime />
-      <MintSection />
-      <Roadmap />
+      <Element name="mint">
+        <MintSection />
+      </Element>
+      <Element name="roadmap">
+        <Roadmap />
+      </Element>
       <Footer />
     </HomeContainer>
   );
