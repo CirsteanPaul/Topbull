@@ -1,8 +1,12 @@
 import React from 'react';
+import { useAppSelector } from '../../../../store';
+import { appWidthSelector } from '../../../../store/selectors/app-selectors';
+import LtMobile from './components/life-time-mobile';
 import LtTable from './components/life-time-table';
 import { LifeTimeContainer, LifeTimeData, LifeTimeDataRed, LifeTimeTitle, LifeTimeTitleContainer, LifeTimeTitleDataContainer, LifeTimeTitleWrapper } from './styles';
 
 const LifeTime = (): JSX.Element => {
+  const width = useAppSelector(appWidthSelector);
   return (
     <LifeTimeContainer>
       <LifeTimeTitleWrapper>
@@ -15,8 +19,7 @@ const LifeTime = (): JSX.Element => {
           <LifeTimeDataRed>BE AHEAD OF THE GAME</LifeTimeDataRed>
         </LifeTimeTitleDataContainer>
       </LifeTimeTitleWrapper>
-
-      <LtTable />
+      {width > 900 ? <LtTable /> : <LtMobile />}
     </LifeTimeContainer>
   );
 };

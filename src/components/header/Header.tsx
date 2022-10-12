@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAppSelector } from '../../store';
-import { appIsScrolledSelector, appWidthSelector } from '../../store/selectors/app-reducer';
+import { appIsScrolledSelector, appWidthSelector } from '../../store/selectors/app-selectors';
 import {
   HeaderContainer,
   HeaderLeftSection,
@@ -78,7 +78,7 @@ const Header = (): JSX.Element => {
         <InsideLink to="roadmap">Roadmap</InsideLink>
         <InsideLink to="faq">Faq</InsideLink>
         <HeaderNavIconTwitter onClick={handleOpenTwitter} src="assets/twitter.png" />
-        <HeaderNavIconDiscord onClick={handleOpenDiscord} src="assets/discord.png" />
+        <HeaderNavIconDiscord onClick={handleOpenDiscord} src="assets/discord-black.png" />
       </HeaderNavContainer>
     </HeaderContainer>
   );

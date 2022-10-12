@@ -1,16 +1,64 @@
-import styled from '../../../../theme';
+import styled, { css } from '../../../../theme';
 
-export const MintSectionContainer = styled.section`
+export const MintSectionContainer = styled.section<{ sliderCard: number; sliderDirection: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   margin: 50px 0;
+  ${props =>
+    props.sliderDirection
+      ? css`
+          transition: margin-top 2s ease;
+        `
+      : css`
+          transition: margin-top 0.3s ease;
+        `};
+  ${props =>
+    props.sliderCard === 2 &&
+    css`
+      margin-top: -1000px;
+    `}
+  ${props =>
+    props.sliderCard === 1 &&
+    css`
+      margin-top: -500px;
+    `}
+  ${props =>
+    props.sliderCard === 0 &&
+    css`
+      margin-top: 30px;
+    `}
   padding: 0 40px;
   @media screen and (max-width: 768px) {
     padding: 0 20px;
     gap: 10px;
-    margin: 30px 0;
+    margin-bottom: 30px;
+    ${props =>
+      props.sliderCard === 2 &&
+      css`
+        margin-top: -950px;
+      `}
+    ${props =>
+      props.sliderCard === 1 &&
+      css`
+        margin-top: -430px;
+      `}
+  }
+  @media screen and (max-width: 512px) {
+    padding: 0 20px;
+    gap: 10px;
+    margin-bottom: 30px;
+    ${props =>
+      props.sliderCard === 2 &&
+      css`
+        margin-top: -900px;
+      `}
+    ${props =>
+      props.sliderCard === 1 &&
+      css`
+        margin-top: -400px;
+      `}
   }
 `;
 

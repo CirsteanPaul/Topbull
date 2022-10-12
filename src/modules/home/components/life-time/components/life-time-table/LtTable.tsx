@@ -6,7 +6,7 @@ const LtTable = (): JSX.Element => {
   const buildCard = (props: LifeTimeCard): JSX.Element => {
     const { title, isRed, stars } = props;
     return (
-      <LttCard isRed={isRed}>
+      <LttCard isRed={isRed} key={title}>
         <LttCardText>{title}</LttCardText>
         {stars === 3 ? <LttCardCheckMark src="assets/checkmark.png" /> : <LttCardEmptyMark />}
         {stars >= 2 ? <LttCardCheckMark src="assets/checkmark.png" /> : <LttCardEmptyMark />}
