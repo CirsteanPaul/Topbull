@@ -8,7 +8,6 @@ import { MintSectionCards, MintSectionContainer, MintSectionInfo, MintSectionTex
 
 const MintSection = (): JSX.Element => {
   const sliderInfo = useAppSelector(appSliderSelector);
-  console.log(sliderInfo);
   return (
     <MintSectionContainer sliderDirection={sliderInfo.dir} sliderCard={sliderInfo.pos}>
       <MintSectionTextWrapper>

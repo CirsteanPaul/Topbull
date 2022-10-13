@@ -17,12 +17,12 @@ export const MintSectionContainer = styled.section<{ sliderCard: number; sliderD
   ${props =>
     props.sliderCard === 2 &&
     css`
-      margin-top: -1000px;
+      margin-top: -950px;
     `}
   ${props =>
     props.sliderCard === 1 &&
     css`
-      margin-top: -500px;
+      margin-top: -400px;
     `}
   ${props =>
     props.sliderCard === 0 &&
@@ -37,12 +37,12 @@ export const MintSectionContainer = styled.section<{ sliderCard: number; sliderD
     ${props =>
       props.sliderCard === 2 &&
       css`
-        margin-top: -950px;
+        margin-top: -800px;
       `}
     ${props =>
       props.sliderCard === 1 &&
       css`
-        margin-top: -430px;
+        margin-top: -340px;
       `}
   }
   @media screen and (max-width: 512px) {
@@ -52,12 +52,12 @@ export const MintSectionContainer = styled.section<{ sliderCard: number; sliderD
     ${props =>
       props.sliderCard === 2 &&
       css`
-        margin-top: -900px;
+        margin-top: -750px;
       `}
     ${props =>
       props.sliderCard === 1 &&
       css`
-        margin-top: -400px;
+        margin-top: -250px;
       `}
   }
 `;

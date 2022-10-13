@@ -55,7 +55,6 @@
 import React from 'react';
 // Carousel originally copied from:
 // https://medium.com/@incubation.ff/build-your-own-css-carousel-in-react-part-one-86f71f6670ca
-import { Item } from './styles';
 import Carousel from './inde';
 import { LifeTimeMobileCardData } from './constants';
 import LtmCard from './life-time-mobile-card';

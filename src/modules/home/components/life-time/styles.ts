@@ -85,3 +85,10 @@ export const LifeTimeDataRed = styled.h6`
     font-size: ${props => props.theme.fontSize.mSmall};
   }
 `;
+export const LtMobileWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+`;
