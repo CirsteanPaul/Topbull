@@ -6,3 +6,4 @@ export const blockchainAccountSelector = (state: RootState): string => state.blo
 export const blockchainWeb3ModalSelector = (state: RootState): Web3Modal => state.blockchain.web3Modal;
 export const blockchainLoadingSelector = (state: RootState): boolean => state.blockchain.loading;
 export const blockchainProviderSelector = (state: RootState): ethers.providers.ExternalProvider => state.blockchain.provider;
+export const blockchainIsConnectedSelector = (state: RootState): boolean => state.blockchain.isConnected;

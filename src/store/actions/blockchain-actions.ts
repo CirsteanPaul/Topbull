@@ -7,6 +7,7 @@ import {
   BLOCKCHAIN__SET_PROVIDER,
   BLOCKCHAIN__FETCH,
   BLOCKCHAIN__SET_WEB3MODAL,
+  BLOCKCHAIN__SET_IS_CONNECTED,
   BLOCKCHAIN__DISCONNECT,
   BLOCKCHAIN__UPDATE_ACCOUNT_ASYNC,
 } from '../constants';
@@ -18,6 +19,7 @@ export const setBlockchainLoadingAction = createAction<boolean>(BLOCKCHAIN__SET_
 export const setBlockchainAccountAction = createAction<string>(BLOCKCHAIN__SET_ACCOUNT);
 export const setBlockchainWeb3ModalAction = createAction<Web3Modal>(BLOCKCHAIN__SET_WEB3MODAL);
 export const setBlockchainProviderAction = createAction<ethers.providers.ExternalProvider>(BLOCKCHAIN__SET_PROVIDER);
+export const setBlockchainIsConnectedAction = createAction<boolean>(BLOCKCHAIN__SET_IS_CONNECTED);
 
 export const fecthBlockchainDataActionAsync = createAsyncThunk<void, never, { state: RootState }>(BLOCKCHAIN__FETCH, async (__: never, thunkApi) => {
   const web3Modal = blockchainWeb3ModalSelector(thunkApi.getState());
@@ -33,6 +35,7 @@ export const fecthBlockchainDataActionAsync = createAsyncThunk<void, never, { st
     const account = library.getSigner(accounts[0]);
     thunkApi.dispatch(setBlockchainProviderAction(library.provider));
     thunkApi.dispatch(setBlockchainAccountAction(account as unknown as string));
+    thunkApi.dispatch(setBlockchainIsConnectedAction(true));
 
     // something to be fetched
   } catch (err) {
