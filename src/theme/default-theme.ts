@@ -21,6 +21,7 @@ const defaultTheme: ITheme = {
     bold: 'Outfit Bold',
     light: 'Outfit Light',
     roboto: 'Roboto',
+    inter: 'Inter Light',
     aldrich: 'Aldrich',
   },
   fontSize: {

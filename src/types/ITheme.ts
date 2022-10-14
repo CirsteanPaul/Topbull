@@ -27,6 +27,7 @@ type fonts = {
   roboto: string;
   regular: string;
   aldrich: string;
+  inter: string;
   bold: string;
   extraBold: string;
   light: string;

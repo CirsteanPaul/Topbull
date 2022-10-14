@@ -1,3 +1,4 @@
+import * as Scroll from 'react-scroll';
 import styled from '../../../theme';
 
 export const FpContainer = styled.section`
@@ -64,7 +65,13 @@ export const FpTitle = styled.h2`
     font-size: ${props => props.theme.fontSize.small};
   }
 `;
-export const FpButton = styled.button`
+export const FpButton = styled(Scroll.Link).attrs(props => ({
+  spy: true,
+  activeClass: `color:${props.theme.colors.primary}`,
+  offset: -50,
+  smooth: 'easeInOutQuint',
+  duratioon: 500,
+}))`
   border-radius: 30px;
   padding: 15px 40px;
   display: flex;
