@@ -5,27 +5,27 @@ export interface LifeTimeCard {
 }
 export const lifeTimeCards: LifeTimeCard[] = [
   {
-    title: 'nft scouting',
+    title: 'Project scouting',
     isRed: true,
     stars: 3,
   },
   {
-    title: 'Live feed',
+    title: 'Live event FEED',
     isRed: false,
     stars: 3,
   },
   {
-    title: 'post your project',
+    title: 'Custom profiles',
     isRed: true,
-    stars: 2,
+    stars: 3,
   },
   {
-    title: 'Dao & tokens scouting access',
+    title: 'rarity tool',
     isRed: false,
-    stars: 2,
+    stars: 3,
   },
   {
-    title: 'profile personalization',
+    title: 'List your projects',
     isRed: true,
     stars: 2,
   },
@@ -35,27 +35,17 @@ export const lifeTimeCards: LifeTimeCard[] = [
     stars: 2,
   },
   {
-    title: 'alerts to upcoming projects',
+    title: 'Custom listing alerts',
     isRed: true,
     stars: 2,
   },
   {
-    title: 'rarity tool',
+    title: 'Social system access',
     isRed: false,
     stars: 2,
   },
   {
-    title: 'Social media access',
-    isRed: true,
-    stars: 2,
-  },
-  {
-    title: 'Post on the feed',
-    isRed: false,
-    stars: 2,
-  },
-  {
-    title: 'comments on posts',
+    title: 'Post about projects',
     isRed: true,
     stars: 2,
   },
@@ -65,24 +55,34 @@ export const lifeTimeCards: LifeTimeCard[] = [
     stars: 2,
   },
   {
-    title: 'chat with creators ',
+    title: 'Claim Whitelist feature',
     isRed: true,
     stars: 2,
   },
   {
-    title: 'Whitelist access',
+    title: 'do fund raising',
     isRed: false,
-    stars: 2,
-  },
-  {
-    title: 'Raise funds',
-    isRed: true,
     stars: 2,
   },
   {
     title: 'Auto buy',
+    isRed: true,
+    stars: 2,
+  },
+  {
+    title: 'Mass bidding',
     isRed: false,
-    stars: 1,
+    stars: 2,
+  },
+  {
+    title: 'minting now feed',
+    isRed: true,
+    stars: 2,
+  },
+  {
+    title: 'enter raffles',
+    isRed: false,
+    stars: 2,
   },
   {
     title: 'work with the biggest creators',
@@ -115,7 +115,7 @@ export const lifeTimeCards: LifeTimeCard[] = [
     stars: 1,
   },
   {
-    title: 'Roiality fees redistribution',
+    title: 'Royality fees redistribution',
     isRed: true,
     stars: 1,
   },

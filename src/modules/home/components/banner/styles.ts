@@ -1,3 +1,4 @@
+import * as Scroll from 'react-scroll';
 import styled from '../../../../theme';
 import bannerGif from './banner-gif.gif';
 
@@ -136,7 +137,12 @@ export const BannerButtonsWrapper = styled.div`
   }
 `;
 
-export const BannerButton = styled.button<{ isHighlighted?: boolean }>`
+export const BannerButton = styled(Scroll.Link).attrs(() => ({
+  spy: true,
+  offset: -50,
+  smooth: 'easeInOutQuint',
+  duratioon: 500,
+}))<{ isHighlighted?: boolean }>`
   color: ${props => (props.isHighlighted ? props.theme.colors.white : props.theme.colors.primary)};
   background-color: ${props => (props.isHighlighted ? props.theme.colors.primary : props.theme.colors.white)};
   text-transform: uppercase;

@@ -8,41 +8,33 @@ export interface LifeTimeMobileInformation {
 }
 export const freeData: LifeTimeMobileInformation[] = [
   {
-    title: 'nft scouting',
+    title: 'Project scouting',
     isRed: true,
   },
   {
-    title: 'Live feed',
+    title: 'Live event FEED',
+    isRed: false,
+  },
+  {
+    title: 'Custom profiles',
+    isRed: true,
+  },
+  {
+    title: 'rarity tool',
     isRed: false,
   },
 ];
 const genesis: LifeTimeMobileInformation[] = [
   {
-    title: 'nft scouting',
+    title: 'Project scouting',
     isRed: true,
   },
   {
-    title: 'Live feed',
+    title: 'Live event FEED',
     isRed: false,
   },
   {
-    title: 'post your project',
-    isRed: true,
-  },
-  {
-    title: 'Dao & tokens scouting access',
-    isRed: false,
-  },
-  {
-    title: 'profile personalization',
-    isRed: true,
-  },
-  {
-    title: 'follow creators',
-    isRed: false,
-  },
-  {
-    title: 'alerts to upcoming projects',
+    title: 'Custom profiles',
     isRed: true,
   },
   {
@@ -50,61 +42,66 @@ const genesis: LifeTimeMobileInformation[] = [
     isRed: false,
   },
   {
-    title: 'Social media access',
+    title: 'List your projects',
     isRed: true,
   },
   {
-    title: 'Post on the feed',
+    title: 'follow creators',
     isRed: false,
   },
   {
-    title: 'comments on posts',
+    title: 'Custom listing alerts',
     isRed: true,
+  },
+
+  {
+    title: 'Social system access',
+    isRed: true,
+  },
+  {
+    title: 'Post about projects',
+    isRed: false,
   },
   {
     title: 'Upvote projects',
     isRed: false,
   },
   {
-    title: 'chat with creators ',
+    title: 'Claim Whitelist feature',
     isRed: true,
   },
   {
-    title: 'Whitelist access',
+    title: 'do fund raising',
     isRed: false,
   },
   {
-    title: 'Raise funds',
+    title: 'Auto buy',
     isRed: true,
+  },
+  {
+    title: 'Mass bidding',
+    isRed: false,
+  },
+  {
+    title: 'minting now feed',
+    isRed: true,
+  },
+  {
+    title: 'enter raffles',
+    isRed: false,
   },
 ];
 const alpha: LifeTimeMobileInformation[] = [
   {
-    title: 'nft scouting',
+    title: 'Project scouting',
     isRed: true,
   },
   {
-    title: 'Live feed',
+    title: 'Live event FEED',
     isRed: false,
   },
   {
-    title: 'post your project',
-    isRed: true,
-  },
-  {
-    title: 'Dao & tokens scouting access',
-    isRed: false,
-  },
-  {
-    title: 'profile personalization',
-    isRed: true,
-  },
-  {
-    title: 'follow creators',
-    isRed: false,
-  },
-  {
-    title: 'alerts to upcoming projects',
+    title: 'Custom profiles',
     isRed: true,
   },
   {
@@ -112,35 +109,51 @@ const alpha: LifeTimeMobileInformation[] = [
     isRed: false,
   },
   {
-    title: 'Social media access',
+    title: 'List your projects',
     isRed: true,
   },
   {
-    title: 'Post on the feed',
+    title: 'follow creators',
     isRed: false,
   },
   {
-    title: 'comments on posts',
+    title: 'Custom listing alerts',
     isRed: true,
+  },
+  {
+    title: 'Social system access',
+    isRed: true,
+  },
+  {
+    title: 'Post about projects',
+    isRed: false,
   },
   {
     title: 'Upvote projects',
     isRed: false,
   },
   {
-    title: 'chat with creators ',
+    title: 'Claim Whitelist feature',
     isRed: true,
   },
   {
-    title: 'Whitelist access',
+    title: 'do fund raising',
     isRed: false,
   },
   {
-    title: 'Raise funds',
+    title: 'Auto buy',
     isRed: true,
   },
   {
-    title: 'Auto buy',
+    title: 'Mass bidding',
+    isRed: false,
+  },
+  {
+    title: 'minting now feed',
+    isRed: true,
+  },
+  {
+    title: 'enter raffles',
     isRed: false,
   },
   {
@@ -168,7 +181,7 @@ const alpha: LifeTimeMobileInformation[] = [
     isRed: false,
   },
   {
-    title: 'Roiality fees redistribution',
+    title: 'Royality fees redistribution',
     isRed: true,
   },
 ];

@@ -49,7 +49,7 @@ export const LifeTimeTitleDataContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 100%;
   gap: 20px;
 `;
 export const LifeTimeData = styled.h6`
@@ -58,7 +58,7 @@ export const LifeTimeData = styled.h6`
   font-family: ${props => props.theme.fonts.regular};
   text-align: center;
   @media screen and (max-width: 768px) {
-    width: 80%;
+    width: 70%;
     font-size: ${props => props.theme.fontSize.medium};
   }
   @media screen and (max-width: 512px) {

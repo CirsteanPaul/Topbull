@@ -109,6 +109,7 @@ export const MintSectionCards = styled.div`
   flex-direction: column;
   max-width: 900px;
   gap: 30px;
+  margin-top: 30px;
   @media screen and (max-width: 890px) {
     max-width: 350px;
   }

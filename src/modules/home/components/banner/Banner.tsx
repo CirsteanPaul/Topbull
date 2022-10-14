@@ -2,12 +2,6 @@ import React from 'react';
 import { BannerButton, BannerButtonsWrapper, BannerContainer, BannerInformation, BannerText, BannerTitle, BannerTitleHighlighted } from './styles';
 
 const Banner = (): JSX.Element => {
-  const handleMintClick = () => {
-    console.log('Mint');
-  };
-  const handleDiscoverClick = () => {
-    console.log('Discover');
-  };
   return (
     <BannerContainer>
       <BannerInformation>
@@ -17,8 +11,8 @@ const Banner = (): JSX.Element => {
         </BannerTitle>
         <BannerText>Become a part of the future leading platform for web3 startups</BannerText>
         <BannerButtonsWrapper>
-          <BannerButton onClick={handleMintClick}>mint now</BannerButton>
-          <BannerButton onClick={handleDiscoverClick} isHighlighted>
+          <BannerButton to="mint">mint now</BannerButton>
+          <BannerButton to="exclusive" isHighlighted>
             Discover more
           </BannerButton>
         </BannerButtonsWrapper>

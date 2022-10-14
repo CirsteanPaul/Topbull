@@ -33,13 +33,13 @@ const Footer = (): JSX.Element => {
         <FooterCopyRight>Copyright © 2022 TOPBULL All rights reserved.</FooterCopyRight>
         <FooterMenuWrapper>
           <FooterMenuContainer>
-            <FooterMenuItem>Home</FooterMenuItem>
-            <FooterMenuItem>Overview</FooterMenuItem>
+            <FooterMenuItem to="banner">Home</FooterMenuItem>
+            <FooterMenuItem to="exclusive">Overview</FooterMenuItem>
           </FooterMenuContainer>
           <FooterMenuContainer>
-            <FooterMenuItem>mint</FooterMenuItem>
-            <FooterMenuItem>roadmap</FooterMenuItem>
-            <FooterMenuItem>faq</FooterMenuItem>
+            <FooterMenuItem to="mint">mint</FooterMenuItem>
+            <FooterMenuItem to="roadmap">roadmap</FooterMenuItem>
+            <FooterMenuItem to="faq">faq</FooterMenuItem>
           </FooterMenuContainer>
           <FooterIcon onClick={handleOpenTwitter} src="assets/twitter.png" />
           <FooterIcon onClick={handleOpenDiscord} src="assets/discord.png" />

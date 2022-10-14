@@ -1,25 +1,30 @@
 import React, { useState } from 'react';
-import { useAppSelector } from '../../store';
-import { appIsScrolledSelector, appWidthSelector } from '../../store/selectors/app-selectors';
+import { useAppDispatch, useAppSelector } from '../../store';
+import { setAppIsNavOpenAction } from '../../store/actions/app-actions';
+import { appIsNavOpen, appIsScrolledSelector, appWidthSelector } from '../../store/selectors/app-selectors';
 import {
   HeaderContainer,
   HeaderLeftSection,
   HeaderLogo,
+  HeaderLogoContainer,
   HeaderLogoMobile,
+  HeaderLogoNavMenuMobile,
   HeaderMobileMenu,
   HeaderNavContainer,
   HeaderNavIconDiscord,
   HeaderNavIconTwitter,
   HeaderTitle,
+  HeaderLogoText,
   InsideLink,
   NavLink,
 } from './styles';
 import './styles.css';
 
 const Header = (): JSX.Element => {
+  const dispatch = useAppDispatch();
   const isScrolled = useAppSelector(appIsScrolledSelector);
   const width = useAppSelector(appWidthSelector);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const isOpen = useAppSelector(appIsNavOpen);
   const handleOpenDiscord = () => {
     window.open('');
   };
@@ -28,7 +33,7 @@ const Header = (): JSX.Element => {
   };
   const buildButton = (): JSX.Element => {
     return (
-      <button style={{ zIndex: 50 }} type="button" onClick={() => setIsOpen(prev => !prev)} className={`${isOpen ? 'active' : ''} burger`}>
+      <button style={{ zIndex: 50 }} type="button" onClick={() => dispatch(setAppIsNavOpenAction(!isOpen))} className={`${isOpen ? 'active' : ''} burger`}>
         <div className={`${isOpen ? 'active' : ''} strip burger-strip-4`}>
           <div />
           <div />
@@ -40,25 +45,27 @@ const Header = (): JSX.Element => {
   if (width < 900) {
     return (
       <HeaderContainer isScrolled={isScrolled}>
-        <HeaderLogo src="assets/logo-silver.png" />
-
+        <HeaderLogoContainer>
+          <HeaderLogoNavMenuMobile src="assets/logo-silver.png" />
+          <HeaderLogoText>Topbull</HeaderLogoText>
+        </HeaderLogoContainer>
         {!isOpen && buildButton()}
         <HeaderMobileMenu isOpen={isOpen}>
           <div style={{ position: 'absolute', top: '20px', right: '30px' }}>{buildButton()}</div>
           <HeaderLogoMobile isOpen={isOpen} src="assets/logo-silver.png" />
-          <InsideLink isOpen={isOpen} onClick={() => setIsOpen(false)} to="banner">
+          <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="banner">
             Home
           </InsideLink>
-          <InsideLink isOpen={isOpen} onClick={() => setIsOpen(false)} to="exclusive">
+          <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="exclusive">
             Overview
           </InsideLink>
-          <InsideLink isOpen={isOpen} onClick={() => setIsOpen(false)} to="mint">
+          <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="mint">
             Mint
           </InsideLink>
-          <InsideLink isOpen={isOpen} onClick={() => setIsOpen(false)} to="roadmap">
+          <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="roadmap">
             Roadmap
           </InsideLink>
-          <InsideLink isOpen={isOpen} onClick={() => setIsOpen(false)} to="faq">
+          <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="faq">
             Faq
           </InsideLink>
         </HeaderMobileMenu>

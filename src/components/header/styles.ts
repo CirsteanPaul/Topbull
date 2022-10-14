@@ -142,3 +142,20 @@ export const HeaderLogoMobile = styled.img<{ isOpen: boolean }>`
       transition: width 1s ease-out;
     `}
 `;
+export const HeaderLogoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
+`;
+export const HeaderLogoNavMenuMobile = styled.img`
+  height: 40px;
+  width: 40px;
+  align-self: center;
+`;
+export const HeaderLogoText = styled.p`
+  text-transform: uppercase;
+  font-size: ${props => props.theme.fontSize.xSmall};
+  font-family: ${props => props.theme.fonts.bold};
+  color: ${props => props.theme.colors.white};
+`;

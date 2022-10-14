@@ -27,6 +27,8 @@ export const LtmInfo = styled.p<{ isRed?: boolean }>`
   border-radius: 20px;
   padding: 10px 30px;
   display: flex;
+  align-items: center;
+  gap: 8px;
   width: 100%;
   text-transform: uppercase;
   @media screen and (max-width: 690px) {
@@ -36,4 +38,9 @@ export const LtmInfo = styled.p<{ isRed?: boolean }>`
     min-width: 200px;
     font-size: ${props => props.theme.fontSize.mSmall};
   }
+`;
+export const LtmiImage = styled.img`
+  align-self: center;
+  height: 20px;
+  width: 20px;
 `;

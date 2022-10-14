@@ -7,7 +7,7 @@ const LtTable = (): JSX.Element => {
     const { title, isRed, stars } = props;
     return (
       <LttCard isRed={isRed} key={title}>
-        <LttCardText>{title}</LttCardText>
+        <LttCardText isGradient={stars === 1}>{title}</LttCardText>
         {stars === 3 ? <LttCardCheckMark src="assets/checkmark.png" /> : <LttCardEmptyMark />}
         {stars >= 2 ? <LttCardCheckMark src="assets/checkmark.png" /> : <LttCardEmptyMark />}
         {stars >= 1 ? <LttCardCheckMark src="assets/checkmark.png" /> : <LttCardEmptyMark />}

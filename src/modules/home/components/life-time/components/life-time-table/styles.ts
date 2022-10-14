@@ -1,4 +1,4 @@
-import styled from '../../../../../../theme';
+import styled, { css } from '../../../../../../theme';
 
 const LABEL_WIDTH = 330;
 const MARK_WIDTH = 100;
@@ -40,11 +40,20 @@ export const LttCard = styled.div<{ isRed?: boolean }>`
   justify-content: space-between;
   align-items: center;
 `;
-export const LttCardText = styled.p`
+export const LttCardText = styled.p<{ isGradient: boolean }>`
   text-transform: uppercase;
   font-family: ${props => props.theme.fonts.regular};
   font-size: ${props => props.theme.fontSize.small};
   color: ${props => props.theme.colors.black};
+  ${props =>
+    props.isGradient &&
+    css`
+      background: linear-gradient(180deg, #ff0000 0%, #000000 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    `};
   width: ${LABEL_WIDTH}px;
 `;
 export const LttCardCheckMark = styled.img`

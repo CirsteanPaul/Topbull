@@ -1,3 +1,4 @@
+import * as Scroll from 'react-scroll';
 import styled from '../../theme';
 
 export const FooterContainer = styled.footer`
@@ -77,7 +78,12 @@ export const FooterMenuContainer = styled.div`
   gap: 10px;
   margin-bottom: 35px;
 `;
-export const FooterMenuItem = styled.div`
+export const FooterMenuItem = styled(Scroll.Link).attrs(() => ({
+  spy: true,
+  offset: -50,
+  smooth: 'easeInOutQuint',
+  duratioon: 500,
+}))`
   color: ${props => props.theme.colors.white};
   font-size: ${props => props.theme.fontSize.xSmall};
   font-weight: ${props => props.theme.fonts.extraBold};
