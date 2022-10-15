@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { faqData, IFaqData } from './constants';
+import './styles.css';
 import {
   FaqCard,
   FaqCardButton,
@@ -18,6 +19,7 @@ import {
 
 const Faq = (): JSX.Element => {
   const [isActive, setIsActive] = useState(0);
+  const [lastPresssed, setLastPressed] = useState(0);
   const buildFaqCard = (item: IFaqData, index: number): JSX.Element => {
     const handleClick = () => {
       if (index === isActive) {
@@ -25,12 +27,16 @@ const Faq = (): JSX.Element => {
       } else {
         setIsActive(index);
       }
+      setLastPressed(index);
     };
     return (
       <FaqCard key={index}>
         <FaqCardHeader onClick={handleClick}>
-          <FaqCardTitle>{item.title}</FaqCardTitle>
-          <FaqCardButton>+</FaqCardButton>
+          <FaqCardTitle isHighlighted={lastPresssed === index}>{item.title}</FaqCardTitle>
+          <button className="faq-toggle" type="button">
+            <span className={`${isActive === index ? 'expanded' : ''} ${lastPresssed === index ? 'highlight' : ''}`} />
+            <span className={`${isActive === index ? 'expanded' : ''} ${lastPresssed === index ? 'highlight' : ''}`} />
+          </button>
         </FaqCardHeader>
         <FaqCardText isActive={isActive === index}>{item.data}</FaqCardText>
         <FaqSectionLine marginTop />

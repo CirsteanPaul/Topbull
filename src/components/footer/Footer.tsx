@@ -24,7 +24,6 @@ const Footer = (): JSX.Element => {
   return (
     <FooterContainer>
       <FooterPopup />
-      <BackgroundMatrix top="-200px" left="0" />
       <FooterWrapper>
         <FooterLogo>
           <FooterLogoImg src="assets/logo-silver.png" />

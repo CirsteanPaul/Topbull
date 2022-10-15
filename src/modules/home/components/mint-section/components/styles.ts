@@ -23,7 +23,7 @@ export const McTitle = styled.h1`
   color: ${props => props.theme.colors.white};
   font-family: ${props => props.theme.fonts.bold};
   font-size: ${props => props.theme.fontSize.large};
-  @media screen and (max-width: 340px) {
+  @media screen and (max-width: 512px) {
     font-size: ${props => props.theme.fontSize.medium};
   }
 `;
@@ -71,7 +71,7 @@ export const McmdqLabel = styled.h3`
   font-size: ${props => props.theme.fontSize.small};
   color: ${props => props.theme.colors.white};
   font-family: ${props => props.theme.fonts.bold};
-  @media screen and (max-width: 340px) {
+  @media screen and (max-width: 512px) {
     font-size: ${props => props.theme.fontSize.mSmall};
   }
 `;
@@ -80,8 +80,8 @@ export const MCmdqValue = styled.h5`
   font-size: ${props => props.theme.fontSize.large};
   color: ${props => props.theme.colors.white};
   font-family: ${props => props.theme.fonts.regular};
-  @media screen and (max-width: 340px) {
-    font-size: ${props => props.theme.fontSize.medium};
+  @media screen and (max-width: 512px) {
+    font-size: ${props => props.theme.fontSize.small};
   }
 `;
 export const McButton = styled.button<{ isMint?: boolean }>`
@@ -142,13 +142,13 @@ export const McmdpLabel = styled.h3`
   font-size: ${props => props.theme.fontSize.small};
   color: ${props => props.theme.colors.white};
   font-family: ${props => props.theme.fonts.bold};
-  @media screen and (max-width: 340px) {
+  @media screen and (max-width: 512px) {
     font-size: ${props => props.theme.fontSize.mSmall};
   }
 `;
 export const McmdpEthereumImage = styled.img`
   height: ${props => props.theme.fontSize.medium};
-  @media screen and (max-width: 340px) {
+  @media screen and (max-width: 512px) {
     height: ${props => props.theme.fontSize.mSmall};
   }
 `;

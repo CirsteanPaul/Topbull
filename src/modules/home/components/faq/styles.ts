@@ -16,6 +16,9 @@ export const FaqLine = styled.div`
   height: 8px;
   border-radius: 4px;
   background-color: ${props => props.theme.colors.primary};
+  @media screen and (max-width: 512px) {
+    width: 90%;
+  }
 `;
 
 export const FaqTitle = styled.h1`
@@ -101,13 +104,13 @@ export const FaqCardHeader = styled.div`
   padding-right: 10px;
   align-items: center;
 `;
-export const FaqCardTitle = styled.h6`
-  color: ${props => props.theme.colors.textWhite};
+export const FaqCardTitle = styled.h6<{ isHighlighted?: boolean }>`
+  color: ${props => (props.isHighlighted ? props.theme.colors.primary : props.theme.colors.textWhite)};
   font-size: ${props => props.theme.fontSize.medium};
   font-family: ${props => props.theme.fonts.regular};
-  max-width: 95%;
+  max-width: 90%;
   @media screen and (max-width: 600px) {
-    max-width: 90%;
+    max-width: 85%;
     font-size: ${props => props.theme.fontSize.small};
   }
 `;
@@ -117,7 +120,7 @@ export const FaqCardButton = styled.button`
 export const FaqCardText = styled.p<{ isActive?: boolean }>`
   height: 0;
   visibility: hidden;
-  transition: visibility 0.1s ease-out, height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
   margin-top: 7px;
   color: ${props => props.theme.colors.textWhite};
   opacity: 0.85;
@@ -127,7 +130,7 @@ export const FaqCardText = styled.p<{ isActive?: boolean }>`
   ${props =>
     props.isActive &&
     css`
-      transition: height 0.4s ease-in, visibility 0.8s ease-in;
+      transition: height 0.4s ease-in, visibility 1.4s ease-in;
       height: 150px;
       visibility: visible;
     `}
