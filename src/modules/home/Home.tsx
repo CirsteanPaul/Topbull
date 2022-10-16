@@ -7,6 +7,7 @@ import Faq from './components/faq';
 import LifeTime from './components/life-time';
 import MintSection from './components/mint-section';
 import Roadmap from './components/roadmap';
+import Team from './components/team';
 import { HomeContainer } from './styles';
 
 const Home = (): JSX.Element => {
@@ -27,6 +28,7 @@ const Home = (): JSX.Element => {
       <Element name="faq">
         <Faq />
       </Element>
+      <Team />
       <Footer />
     </HomeContainer>
   );

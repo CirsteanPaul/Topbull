@@ -9,7 +9,7 @@ export const MintSectionContainer = styled.section<{ sliderCard: number; sliderD
   ${props =>
     props.sliderDirection
       ? css`
-          transition: margin-top 2s ease;
+          transition: margin-top 0.9s ease;
         `
       : css`
           transition: margin-top 0.3s ease;
@@ -17,7 +17,7 @@ export const MintSectionContainer = styled.section<{ sliderCard: number; sliderD
   ${props =>
     props.sliderCard === 2 &&
     css`
-      margin-top: -950px;
+      margin-top: -550px;
     `}
   ${props =>
     props.sliderCard === 1 &&
@@ -37,12 +37,12 @@ export const MintSectionContainer = styled.section<{ sliderCard: number; sliderD
     ${props =>
       props.sliderCard === 2 &&
       css`
-        margin-top: -800px;
+        margin-top: -420px;
       `}
     ${props =>
       props.sliderCard === 1 &&
       css`
-        margin-top: -340px;
+        margin-top: -300px;
       `}
   }
   @media screen and (max-width: 512px) {
@@ -52,7 +52,7 @@ export const MintSectionContainer = styled.section<{ sliderCard: number; sliderD
     ${props =>
       props.sliderCard === 2 &&
       css`
-        margin-top: -750px;
+        margin-top: -380px;
       `}
     ${props =>
       props.sliderCard === 1 &&

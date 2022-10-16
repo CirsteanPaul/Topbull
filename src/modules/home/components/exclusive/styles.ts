@@ -1,16 +1,33 @@
 import styled from '../../../../theme';
+import thunderBackground from './thunder-red.gif';
 
 export const ExclusiveContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  margin: 70px 0;
+  position: relative;
+  margin-bottom: 70px;
   padding: 0 40px;
+  opacity: 1;
+  padding-top: 70px;
+  &:before {
+    content: '';
+    background-image: url(${thunderBackground});
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.45;
+    height: 700px;
+  }
   @media screen and (max-width: 768px) {
     padding: 0 20px;
+    padding-top: 30px;
     gap: 20px;
-    margin: 30px 0;
+    margin-bottom: 30px;
   }
 `;
 export const ExclusiveTextWrapper = styled.div`

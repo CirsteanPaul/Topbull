@@ -115,7 +115,7 @@ export const HeaderMobileMenu = styled.nav<{ isOpen?: boolean }>`
   left: 0;
   width: 0;
   display: flex;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   background-color: black;
   flex-grow: 1;

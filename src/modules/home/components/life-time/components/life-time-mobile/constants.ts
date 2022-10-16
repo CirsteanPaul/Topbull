@@ -1,6 +1,7 @@
 export interface LifeTimeMobileCard {
   title: string;
   data: LifeTimeMobileInformation[];
+  isFree?: boolean;
 }
 export interface LifeTimeMobileInformation {
   title: string;
@@ -189,6 +190,7 @@ export const LifeTimeMobileCardData: LifeTimeMobileCard[] = [
   {
     title: 'Free',
     data: freeData,
+    isFree: true,
   },
   {
     title: 'alpha',

@@ -17,6 +17,10 @@ export const McInformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  @media screen and (max-width: 512px) {
+    gap: 8px;
+    padding: 16px;
+  }
 `;
 export const McTitle = styled.h1`
   text-transform: uppercase;
@@ -59,6 +63,9 @@ export const McMintDetails = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 512px) {
+    margin-top: 5px;
+  }
 `;
 export const McMintDetailsQuantity = styled.div`
   display: flex;
@@ -77,6 +84,8 @@ export const McmdqLabel = styled.h3`
 `;
 export const MCmdqValue = styled.h5`
   text-transform: uppercase;
+  display: flex;
+  white-space: nowrap;
   font-size: ${props => props.theme.fontSize.large};
   color: ${props => props.theme.colors.white};
   font-family: ${props => props.theme.fonts.regular};

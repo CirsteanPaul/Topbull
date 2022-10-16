@@ -3,9 +3,9 @@ import { LifeTimeMobileCard } from '../constants';
 import { LtmContainer, LtmiImage, LtmInfo, LtmTitle } from './styles';
 
 const LtmCard = (props: LifeTimeMobileCard): JSX.Element => {
-  const { title, data } = props;
+  const { title, data, isFree } = props;
   return (
-    <LtmContainer>
+    <LtmContainer isFree={isFree}>
       <LtmTitle>{title}</LtmTitle>
       <hr />
       {data.map(elem => {

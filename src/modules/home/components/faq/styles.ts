@@ -17,7 +17,7 @@ export const FaqLine = styled.div`
   border-radius: 4px;
   background-color: ${props => props.theme.colors.primary};
   @media screen and (max-width: 512px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 
