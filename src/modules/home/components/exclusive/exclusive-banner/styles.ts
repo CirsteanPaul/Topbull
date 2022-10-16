@@ -7,12 +7,19 @@ export const EbContainer = styled.div`
   display: flex;
   position: relative;
   gap: 180px;
+  align-self: center;
   flex-direction: column;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1200px;
 
   align-items: center;
   padding: 30px 20px;
+  @media screen and (max-width: 900px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 512px) {
+    width: 100%;
+  }
   @media screen and (max-width: 312px) {
     gap: 120px;
   }
@@ -48,6 +55,7 @@ export const EbTitle = styled.h1`
   color: ${props => props.theme.colors.textWhite};
   font-family: ${props => props.theme.fonts.extraBold};
   letter-spacing: 4px;
+  text-align: center;
   font-size: ${props => props.theme.fontSize.gigant};
   @media screen and (max-width: 768px) {
     font-size: ${props => props.theme.fontSize.xLarge};
@@ -66,9 +74,13 @@ export const EbTitle = styled.h1`
 export const EbCardsContainer = styled.div`
   display: flex;
   gap: 32px;
-  @media screen and (max-width: 768px) {
+  padding-top: 30px;
+  @media screen and (max-width: 900px) {
     flex-direction: column;
     gap: 140px;
+  }
+  @media screen and (max-width: 512px) {
+    padding-top: 0;
   }
   @media screen and (max-width: 312px) {
     gap: 100px;

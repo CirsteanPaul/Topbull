@@ -15,7 +15,7 @@ const Exclusive = () => {
         <ExclusiveBubble />
         <ExclusiveBubble />
       </ExclusiveBubblesWrapper>
-      <Element name="exclusive">
+      <Element style={{ width: '100%', display: 'flex', justifyContent: 'center' }} name="exclusive">
         <ExclusiveBanner />
       </Element>
     </ExclusiveContainer>

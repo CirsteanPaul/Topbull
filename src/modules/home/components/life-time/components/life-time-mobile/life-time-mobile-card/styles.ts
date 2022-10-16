@@ -6,13 +6,16 @@ export const LtmContainer = styled.section<{ isFree?: boolean }>`
   flex-direction: column;
   background-color: ${props => props.theme.colors.white};
   border-radius: 20px;
-  width: 86vw;
+  width: 80vw;
   align-self: center;
   ${props =>
     props.isFree &&
     css`
       padding-bottom: 400px;
     `}
+  @media screen and (max-width: 312px) {
+    width: 92vw;
+  }
 `;
 export const LtmTitle = styled.h3`
   font-family: ${props => props.theme.fonts.regular};

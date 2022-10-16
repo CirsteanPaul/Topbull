@@ -8,9 +8,9 @@ const useModalIsOpen = () => {
   useEffect(() => {
     const body = document.querySelector('body');
     if (isOpen) {
-      body?.setAttribute('style', 'overflow: hidden');
+      body?.setAttribute('style', ' overflow-x: hidden; overflow-y: hidden');
     } else {
-      body?.setAttribute('style', 'overflow: scroll');
+      body?.setAttribute('style', 'overflow-x: hidden; overflow-y: scroll');
     }
   }, [isOpen]);
 };

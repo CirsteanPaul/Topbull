@@ -3,10 +3,10 @@ import { EbCardContainer, EbcImage, EbcText, EbcTitle } from './styles';
 import IEbCardProps from './types';
 
 const EbCard = (props: IEbCardProps): JSX.Element => {
-  const { title, text, image } = props;
+  const { title, text, image, isBigger } = props;
   return (
     <EbCardContainer>
-      <EbcImage src={image} />
+      <EbcImage src={image} isBigger={isBigger} />
       <EbcTitle>{title}</EbcTitle>
       <EbcText>{text}</EbcText>
     </EbCardContainer>

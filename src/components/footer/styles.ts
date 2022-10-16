@@ -16,6 +16,11 @@ export const FooterContainer = styled.footer`
     padding-top: 70px;
     min-height: 100px;
   }
+  @media screen and (max-width: 512px) {
+    padding-top: 70px;
+    min-height: 100px;
+    margin-top: 220px;
+  }
 `;
 
 export const FooterWrapper = styled.div`

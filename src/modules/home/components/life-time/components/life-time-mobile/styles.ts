@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
 
 export const CarouselSlot = styled.div<{ order: number }>`
   width: 100%;
-  margin: 20px;
+  margin: 60px;
   order: ${props => props.order};
   display: flex;
   flex-direction: column;

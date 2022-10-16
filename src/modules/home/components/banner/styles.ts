@@ -24,12 +24,8 @@ export const BannerInformation = styled.div`
   flex-direction: column;
   gap: 16px;
   width: 88%;
-  max-width: 800px;
   padding: 0 80px;
   padding-right: 10px;
-  @media screen and (min-width: 1412px) {
-    max-width: 1200px;
-  }
   @media screen and (max-width: 768px) {
     width: 100%;
     padding: 0 60px;
@@ -57,12 +53,14 @@ export const BannerTitle = styled.h1`
   font-weight: 400;
   font-size: ${props => props.theme.fontSize.xxLarge};
 
-  @media screen and (min-width: 1412px) {
+  @media screen and (min-width: 1200px) {
     font-size: ${props => props.theme.fontSize.xxLarge};
+    max-width: 800px;
   }
   @media screen and (max-width: 1100px) {
     color: ${props => props.theme.colors.gray};
     text-shadow: 1px 1px black;
+    max-width: 800px;
   }
   @media screen and (max-width: 768px) {
     width: 88%;
@@ -96,7 +94,7 @@ export const BannerText = styled.h4`
   color: ${props => props.theme.colors.textWhite};
   font-family: ${props => props.theme.fonts.aldrich};
   font-size: ${props => props.theme.fontSize.small};
-  width: 60%;
+  width: 45%;
   padding-left: 4px;
   @media screen and (min-width: 1412px) {
     width: 40%;

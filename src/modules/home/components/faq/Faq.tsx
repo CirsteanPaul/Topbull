@@ -18,8 +18,8 @@ import {
 } from './styles';
 
 const Faq = (): JSX.Element => {
-  const [isActive, setIsActive] = useState(0);
-  const [lastPresssed, setLastPressed] = useState(0);
+  const [isActive, setIsActive] = useState(-1);
+  const [lastPresssed, setLastPressed] = useState(-1);
   const buildFaqCard = (item: IFaqData, index: number): JSX.Element => {
     const handleClick = () => {
       if (index === isActive) {
@@ -48,7 +48,7 @@ const Faq = (): JSX.Element => {
       <FaqLine />
       <FaqTitle>faq</FaqTitle>
       <FaqData>
-        <FaqImage src="assets/faq-image.png" />
+        {/* <FaqImage src="assets/faq-image.png" /> */}
         <FaqWrapper>
           <FaqSectionTitle>Frequently Asked Questions</FaqSectionTitle>
           <FaqSectionLine />

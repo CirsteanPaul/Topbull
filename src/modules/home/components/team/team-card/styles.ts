@@ -18,10 +18,11 @@ export const TeamCardInfoContainer = styled.div`
   gap: 8px;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
 `;
 
 export const TeamCardInfoTitle = styled.h2`
-  font-size: ${props => props.theme.fontSize.xLarge};
+  font-size: ${props => props.theme.fontSize.large};
   color: ${props => props.theme.colors.white};
   font-family: ${props => props.theme.fonts.bold};
   text-transform: uppercase;
@@ -40,7 +41,7 @@ export const TeamCardInfoText = styled.p`
   text-transform: uppercase;
   text-align: center;
   color: ${props => props.theme.colors.white};
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 924px) {
     font-size: ${props => props.theme.fontSize.mSmall};
   }
 `;

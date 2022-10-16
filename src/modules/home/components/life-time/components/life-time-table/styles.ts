@@ -10,6 +10,7 @@ export const LttContainer = styled.section`
   border-radius: 20px;
   width: 90%;
   min-width: 700px;
+  max-width: 1000px;
   align-self: center;
   @media screen and (max-width: 900px) {
     display: none;

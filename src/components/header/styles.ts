@@ -9,18 +9,31 @@ export const HeaderContainer = styled.header<{ isScrolled?: boolean }>`
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
-  z-index: 10;
-  ${props =>
-    props.isScrolled &&
-    css`
-      -webkit-backdrop-filter: blur(7px);
-      backdrop-filter: blur(7px);
-      background-color: rgba(0, 0, 0, 0.3);
-    `};
+  z-index: 20;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    transition: height 0.1s ease-out;
+    left: 0;
+    height: 0;
+    z-index: 10;
+    width: 100%;
+    ${props =>
+      props.isScrolled &&
+      css`
+        height: 100%;
+        transition: height 0.3s ease;
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+        background-color: rgba(0, 0, 0, 0.3);
+      `};
+  }
 `;
 export const HeaderLeftSection = styled.div`
   display: flex;
   align-items: center;
+  z-index: 10;
 `;
 export const HeaderLogo = styled.img`
   height: 60px;
@@ -41,6 +54,7 @@ export const HeaderNavContainer = styled.nav`
   display: flex;
   gap: 20px;
   align-self: center;
+  z-index: 21;
   align-items: center;
 `;
 export const HeaderNavItem = styled(Scroll.Link)`
@@ -51,6 +65,8 @@ export const HeaderNavItem = styled(Scroll.Link)`
   font-family: ${props => props.theme.fonts.regular};
   font-size: ${props => props.theme.fontSize.small};
   color: ${props => props.theme.colors.white};
+  z-index: 10;
+
   &:hover {
     outline: 0;
     border: 0;
@@ -144,6 +160,7 @@ export const HeaderLogoMobile = styled.img<{ isOpen: boolean }>`
 `;
 export const HeaderLogoContainer = styled.div`
   display: flex;
+  z-index: 22;
   flex-direction: column;
   align-items: center;
   padding: 4px 0;

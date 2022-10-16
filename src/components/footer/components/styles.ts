@@ -7,7 +7,7 @@ export const FpContainer = styled.section`
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  width: 600px;
+  width: 700px;
   height: 300px;
   align-items: center;
   justify-content: center;
@@ -20,12 +20,7 @@ export const FpContainer = styled.section`
     top: -250px;
   }
   @media screen and (max-width: 768px) {
-    width: 400px;
-    height: 250px;
-    top: -200px;
-  }
-  @media screen and (max-width: 768px) {
-    width: 400px;
+    width: 70%;
     height: 250px;
     top: -200px;
   }
@@ -45,6 +40,7 @@ export const FpLittleText = styled.h6`
   font-family: ${props => props.theme.fonts.regular};
   font-size: ${props => props.theme.fontSize.small};
   text-transform: uppercase;
+  text-align: center;
   @media screen and (max-width: 768px) {
     font-size: ${props => props.theme.fontSize.mSmall};
   }
@@ -75,6 +71,7 @@ export const FpButton = styled(Scroll.Link).attrs(props => ({
   border-radius: 30px;
   padding: 15px 40px;
   display: flex;
+  text-align: center;
   align-items: center;
   max-width: 400px;
   text-transform: uppercase;

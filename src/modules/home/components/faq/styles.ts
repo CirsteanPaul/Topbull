@@ -1,5 +1,3 @@
-import { themesList } from 'web3modal';
-import { FAQ_CARD_HEIGHT } from '../../../../constants/styles-constants';
 import styled, { css } from '../../../../theme';
 
 export const FaqContainer = styled.section`
@@ -46,22 +44,23 @@ export const FaqTitle = styled.h1`
 
 export const FaqData = styled.div`
   display: flex;
-  width: 90%;
+  width: 70%;
   gap: 10px;
   align-items: center;
+  max-width: 800px;
   @media screen and (max-width: 950px) {
     flex-direction: column;
     gap: 12px;
     align-items: center;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     width: 100%;
   }
 `;
 export const FaqImage = styled.img`
-  align-self: center;
-  height: 300px;
-  width: 400px;
+  align-self: flex-start;
+  height: 450px;
+  width: 550px;
   @media screen and (max-width: 1000px) {
     height: 250px;
     width: 350px;
@@ -130,38 +129,15 @@ export const FaqCardText = styled.p<{ isActive?: boolean }>`
   ${props =>
     props.isActive &&
     css`
-      transition: height 0.4s ease-in, visibility 1.4s ease-in;
-      height: 150px;
+      transition: visibility 1.4s ease-in;
       visibility: visible;
+      height: auto;
     `}
-  @media screen and (max-width: 950px) {
-    ${props =>
-      props.isActive &&
-      css`
-        transition: height 0.4s ease-in, visibility 0.8s ease-in;
-        height: 100px;
-        visibility: visible;
-      `}
-  }
   @media screen and (max-width: 600px) {
     font-size: ${props => props.theme.fontSize.mSmall};
-    max-width: 90%
-      ${props =>
-        props.isActive &&
-        css`
-          transition: height 0.1s ease-in, visibility 0.8s ease-in;
-          height: 120px;
-          visibility: visible;
-        `};
+    max-width: 90%;
   }
   @media screen and (max-width: 312px) {
     font-size: ${props => props.theme.fontSize.xSmall};
-    ${props =>
-      props.isActive &&
-      css`
-        transition: height 0.1s ease-in, visibility 3s ease-in;
-        height: 160px;
-        visibility: visible;
-      `}
   }
 `;

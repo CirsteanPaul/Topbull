@@ -5,7 +5,7 @@ export interface IFaqData {
 export const faqData: IFaqData[] = [
   {
     title: 'What is the maximum supply?',
-    data: 'Initially there will be 4.000 TopBull permits for sale but the amount will later increase proportional to the demand. We aim to keep in balance the resell value of the permit while also expanding the community in order to bring even more exposure.',
+    data: 'Initially there will be 4500 TopBull permits for sale but the amount will later increase proportional to the demand. We aim to keep in balance the resell value of the permit while also expanding the community in order to bring even more exposure.',
   },
   {
     title: 'Why should I become part of the Top Bull community?',
@@ -37,6 +37,6 @@ export const faqData: IFaqData[] = [
   },
   {
     title: 'What is the maximum mint amount for each address?',
-    data: 'The maximum mint amount per wallet is 2 for each type of permit.',
+    data: 'The maximum mint amount per wallet is 5 for each type of permit.',
   },
 ];

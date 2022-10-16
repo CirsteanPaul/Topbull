@@ -20,8 +20,8 @@ export const ExclusiveContainer = styled.section`
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.45;
-    height: 700px;
+    opacity: 0.2;
+    height: 400px;
   }
   @media screen and (max-width: 768px) {
     padding: 0 20px;
@@ -37,6 +37,7 @@ export const ExclusiveTextWrapper = styled.div`
   width: 80%;
   max-width: 1400px;
   align-items: center;
+  z-index: 10;
   text-align: center;
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -46,6 +47,7 @@ export const ExclusiveTextTitle = styled.h1<{ isHighlighted?: boolean }>`
   color: ${props => (props.isHighlighted ? props.theme.colors.primary : props.theme.colors.white)};
   font-size: ${props => props.theme.fontSize.xLarge};
   text-transform: uppercase;
+  z-index: 4;
   @media screen and (max-width: 768px) {
     width: 100%;
     font-size: ${props => props.theme.fontSize.large};

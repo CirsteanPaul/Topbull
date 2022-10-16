@@ -15,6 +15,7 @@ const exclusiveCards: IEbCardProps[] = [
     title: 'Diversity',
     image: 'assets/exclusive-3.png',
     text: 'We will promote and expose all types of blockchain projects to our community, including: NFT Collections, DAO’s, Crypto Games, Tokens and many more!',
+    isBigger: true,
   },
 ];
 
