@@ -23,9 +23,9 @@ export const setBlockchainIsConnectedAction = createAction<boolean>(BLOCKCHAIN__
 
 export const fecthBlockchainDataActionAsync = createAsyncThunk<void, never, { state: RootState }>(BLOCKCHAIN__FETCH, async (__: never, thunkApi) => {
   const web3Modal = blockchainWeb3ModalSelector(thunkApi.getState());
-  thunkApi.dispatch(setBlockchainLoadingAction(true));
   try {
     const mainProvider = await web3Modal.connect();
+    thunkApi.dispatch(setBlockchainLoadingAction(true));
     const library = new ethers.providers.Web3Provider(mainProvider);
     const isChainRight = await switchNetworkByWallet({ library });
     if (!isChainRight) {

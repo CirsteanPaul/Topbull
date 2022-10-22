@@ -57,19 +57,7 @@ export const FaqData = styled.div`
     width: 100%;
   }
 `;
-export const FaqImage = styled.img`
-  align-self: flex-start;
-  height: 450px;
-  width: 550px;
-  @media screen and (max-width: 1000px) {
-    height: 250px;
-    width: 350px;
-  }
-  @media screen and (max-width: 600px) {
-    height: 200px;
-    width: 250px;
-  }
-`;
+
 export const FaqWrapper = styled.div`
   flex: 1;
   display: flex;

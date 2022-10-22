@@ -1,5 +1,4 @@
 import React from 'react';
-import BackgroundMatrix from '../background-matrix';
 import FooterPopup from './components';
 import {
   FooterContainer,
@@ -19,7 +18,7 @@ const Footer = (): JSX.Element => {
     window.open('');
   };
   const handleOpenTwitter = () => {
-    window.open('');
+    window.open('https://twitter.com/TopBullNFT');
   };
   return (
     <FooterContainer>

@@ -10,7 +10,7 @@ const Team = (): JSX.Element => {
       <TeamTitle>Team</TeamTitle>
       <TeamContainerCards>
         {teamData.map(item => (
-          <TeamCard {...item} />
+          <TeamCard key={item.title} {...item} />
         ))}
       </TeamContainerCards>
     </TeamContainer>

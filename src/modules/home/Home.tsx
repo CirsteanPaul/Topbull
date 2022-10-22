@@ -1,6 +1,9 @@
 import { Element } from 'react-scroll';
+import AppLoaderOverlay from '../../components/app-loader-overlay';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
+import { useAppSelector } from '../../store';
+import { blockchainLoadingSelector } from '../../store/selectors/blockchain-selectors';
 import Banner from './components/banner';
 import Exclusive from './components/exclusive';
 import Faq from './components/faq';
@@ -11,8 +14,11 @@ import Team from './components/team';
 import { HomeContainer } from './styles';
 
 const Home = (): JSX.Element => {
+  const blockchainLoading = useAppSelector(blockchainLoadingSelector);
+
   return (
     <HomeContainer>
+      <AppLoaderOverlay isLoading={blockchainLoading} />
       <Header />
       <Element name="banner">
         <Banner />

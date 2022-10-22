@@ -1,7 +1,6 @@
+import { LABEL_WIDTH, MARK_WIDTH } from '../../../../../../constants/styles-constants';
 import styled, { css } from '../../../../../../theme';
 
-const LABEL_WIDTH = 330;
-const MARK_WIDTH = 100;
 export const LttContainer = styled.section`
   display: flex;
   padding: 30px;

@@ -1,21 +1,7 @@
 import React, { useState } from 'react';
 import { faqData, IFaqData } from './constants';
 import './styles.css';
-import {
-  FaqCard,
-  FaqCardButton,
-  FaqCardHeader,
-  FaqCardText,
-  FaqCardTitle,
-  FaqContainer,
-  FaqData,
-  FaqImage,
-  FaqLine,
-  FaqSectionLine,
-  FaqSectionTitle,
-  FaqTitle,
-  FaqWrapper,
-} from './styles';
+import { FaqCard, FaqCardHeader, FaqCardText, FaqCardTitle, FaqContainer, FaqData, FaqLine, FaqSectionLine, FaqSectionTitle, FaqTitle, FaqWrapper } from './styles';
 
 const Faq = (): JSX.Element => {
   const [isActive, setIsActive] = useState(-1);
@@ -48,7 +34,6 @@ const Faq = (): JSX.Element => {
       <FaqLine />
       <FaqTitle>faq</FaqTitle>
       <FaqData>
-        {/* <FaqImage src="assets/faq-image.png" /> */}
         <FaqWrapper>
           <FaqSectionTitle>Frequently Asked Questions</FaqSectionTitle>
           <FaqSectionLine />

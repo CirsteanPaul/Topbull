@@ -1,7 +1,4 @@
-/* eslint-disable no-underscore-dangle */
 /* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable @typescript-eslint/no-use-before-define */
-/* eslint-disable react/destructuring-assignment */
 import React, { FunctionComponent, ReactNode } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { useAppDispatch, useAppSelector } from '../../../../../../store';
@@ -14,7 +11,8 @@ const getOrder = (index: number, pos: number, numItems: number) => {
 };
 
 const Carousel: FunctionComponent<{ children: ReactNode }> = props => {
-  const numItems = React.Children.count(props.children);
+  const { children } = props;
+  const numItems = React.Children.count(children);
   const dispatch = useAppDispatch();
   const sliderInfo = useAppSelector(appSliderSelector);
   const slideRight = () => {
@@ -48,7 +46,7 @@ const Carousel: FunctionComponent<{ children: ReactNode }> = props => {
     <div {...handlers}>
       <Wrapper>
         <CarouselContainer dir={sliderInfo.dir ? 'NEXT' : 'PREV'} sliding={sliderInfo.sliding}>
-          {React.Children.map(props.children, (child, index) => (
+          {React.Children.map(children, (child, index) => (
             <CarouselSlot order={getOrder(index, sliderInfo.pos, numItems)}>{child}</CarouselSlot>
           ))}
         </CarouselContainer>

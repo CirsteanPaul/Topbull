@@ -55,12 +55,11 @@
 import React from 'react';
 // Carousel originally copied from:
 // https://medium.com/@incubation.ff/build-your-own-css-carousel-in-react-part-one-86f71f6670ca
-import Carousel from './inde';
+import Carousel from './Carousel';
 import { LifeTimeMobileCardData } from './constants';
 import LtmCard from './life-time-mobile-card';
-// Carousel originally copied from:
-// https://medium.com/@incubation.ff/build-your-own-css-carousel-in-react-part-one-86f71f6670ca
-const SimpleCarousel = () => {
+
+const LtMobile = () => {
   return (
     <Carousel>
       {LifeTimeMobileCardData.map(data => (
@@ -70,4 +69,4 @@ const SimpleCarousel = () => {
   );
 };
 
-export default SimpleCarousel;
+export default LtMobile;

@@ -4,16 +4,7 @@ import { appWidthSelector } from '../../../../store/selectors/app-selectors';
 import LtMobile from './components/life-time-mobile';
 import LtTable from './components/life-time-table';
 import App from './components/life-time-toggle/LtToggle';
-import {
-  LifeTimeContainer,
-  LifeTimeData,
-  LifeTimeDataRed,
-  LifeTimeTitle,
-  LifeTimeTitleContainer,
-  LifeTimeTitleDataContainer,
-  LifeTimeTitleWrapper,
-  LtMobileWrapper,
-} from './styles';
+import { LifeTimeContainer, LifeTimeData, LifeTimeDataRed, LifeTimeTitle, LifeTimeTitleContainer, LifeTimeTitleDataContainer, LifeTimeTitleWrapper } from './styles';
 
 const LifeTime = (): JSX.Element => {
   const width = useAppSelector(appWidthSelector);

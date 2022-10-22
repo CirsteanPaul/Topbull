@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../store';
 import { setAppIsNavOpenAction } from '../../store/actions/app-actions';
 import { appIsNavOpen, appIsScrolledSelector, appWidthSelector } from '../../store/selectors/app-selectors';
@@ -29,7 +29,7 @@ const Header = (): JSX.Element => {
     window.open('');
   };
   const handleOpenTwitter = () => {
-    window.open('');
+    window.open('https://twitter.com/TopBullNFT');
   };
   const buildButton = (): JSX.Element => {
     return (
