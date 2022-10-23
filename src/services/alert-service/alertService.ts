@@ -10,6 +10,15 @@ const errorAlert = (props: ErrorAlertProps): void => {
   });
 };
 
-const alertService = { errorAlert };
+const successAlert = (props: ErrorAlertProps): void => {
+  const { title, message } = props;
+  Swal.fire({
+    icon: 'success',
+    title,
+    text: message,
+  });
+};
+
+const alertService = { errorAlert, successAlert };
 
 export default alertService;

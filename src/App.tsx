@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import useEmitters from './hooks/useEmitters';
 import useModalIsOpen from './hooks/useModallsOpen';
 import useWeb3Modal from './hooks/useWeb3Modal';
@@ -8,7 +9,14 @@ const App = (): JSX.Element => {
   useEmitters();
   useModalIsOpen();
 
-  return <Home />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<Home />} />
+        <Route path="*" element={<div>NotFound</div>} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;

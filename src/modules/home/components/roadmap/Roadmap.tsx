@@ -1,6 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import BackgroundMatrix from '../../../../components/background-matrix';
 import RoadmapInformation from './components';
 import { RoadMapData } from './constants';
 import { RoadmapContainer, RoadmapInfoContainer, RoadmapTitle } from './styles';

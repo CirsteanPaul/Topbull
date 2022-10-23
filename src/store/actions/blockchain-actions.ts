@@ -8,15 +8,19 @@ import {
   BLOCKCHAIN__FETCH,
   BLOCKCHAIN__SET_WEB3MODAL,
   BLOCKCHAIN__SET_IS_CONNECTED,
+  BLOCKCHAIN__SET_CONTRACT,
   BLOCKCHAIN__DISCONNECT,
   BLOCKCHAIN__UPDATE_ACCOUNT_ASYNC,
 } from '../constants';
 import { RootState } from '..';
 import { blockchainWeb3ModalSelector } from '../selectors/blockchain-selectors';
 import { switchNetworkByWallet } from './blockchain-utils';
+import Config from '../../config';
+import { fetchContractInfoActionAsync } from './contract-actions';
 
 export const setBlockchainLoadingAction = createAction<boolean>(BLOCKCHAIN__SET_LOADING);
 export const setBlockchainAccountAction = createAction<string>(BLOCKCHAIN__SET_ACCOUNT);
+export const setBlockchainContractAction = createAction<ethers.Contract>(BLOCKCHAIN__SET_CONTRACT);
 export const setBlockchainWeb3ModalAction = createAction<Web3Modal>(BLOCKCHAIN__SET_WEB3MODAL);
 export const setBlockchainProviderAction = createAction<ethers.providers.ExternalProvider>(BLOCKCHAIN__SET_PROVIDER);
 export const setBlockchainIsConnectedAction = createAction<boolean>(BLOCKCHAIN__SET_IS_CONNECTED);
@@ -33,10 +37,12 @@ export const fecthBlockchainDataActionAsync = createAsyncThunk<void, never, { st
     }
     const accounts = await library.listAccounts();
     const account = library.getSigner(accounts[0]);
+    const contract = new ethers.Contract(Config.contractAddress, Config.contractAbi, account);
     thunkApi.dispatch(setBlockchainProviderAction(library.provider));
-    thunkApi.dispatch(setBlockchainAccountAction(account as unknown as string));
-    thunkApi.dispatch(setBlockchainIsConnectedAction(true));
-
+    // eslint-disable-next-line no-underscore-dangle
+    thunkApi.dispatch(setBlockchainAccountAction(account._address));
+    thunkApi.dispatch(setBlockchainContractAction(contract));
+    thunkApi.dispatch(fetchContractInfoActionAsync());
     // something to be fetched
   } catch (err) {
     // swallow exception

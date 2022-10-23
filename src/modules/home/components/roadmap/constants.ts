@@ -15,7 +15,7 @@ export const RoadMapData: RoadMapInfo[] = [
   },
   {
     title: 'The beta release',
-    text: 'A “Beta” version of the platform will be released. It will have the core functionality of the future BEAST we are building. Holders will now be able to access the platform and expose their projects to a high quality web3 community. By this point, both the Collectors and the Creators will apreciate more the power and efficiency of the platform. As demand will keep on rising we will slowly release more passes to expand the community while also keeping the quality of investors high.',
+    text: 'A “Beta” version of the platform will be released. It will have the core functionality of the future BEAST we are building. Holders will now be able to access the platform and expose their projects to a high quality web3 community. By this point, both the Collectors and the Creators will appreciate more the power and efficiency of the platform. As demand will keep on rising we will slowly release more passes to expand the community while also keeping the quality of investors high.',
     align: Alignment.right,
   },
   {
@@ -25,7 +25,7 @@ export const RoadMapData: RoadMapInfo[] = [
   },
   {
     title: 'The Consolidation phase',
-    text: 'We have expanded our community and we have created the TopBull platform. What is next? We plan on taking over the Crypto space by creating the social network of web3 projects. We will give users the ability to chat with one another, post about their favourite projects on a feed and also contact the top personalities in the crypto space for collaborating together. We are building the project that will take over web3 space without a doubt. The question is: Will you be part of it?',
+    text: 'We have expanded our community and we have created the TopBull platform. What is next? We plan on taking over the Crypto space by creating the social network of web3 projects. We will give users the ability to chat with one another, post about their favourite projects on a feed and also contact the top personalities in the crypto space for working together. We are building the project that will take over web3 space without a doubt. The question is: Will you be part of it?',
     align: Alignment.right,
   },
 ];

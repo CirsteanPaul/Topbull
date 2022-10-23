@@ -12,7 +12,7 @@ interface ISwitchNetworkProps {
 interface ISwitchNetworkWalletProps {
   library: ethers.providers.Web3Provider;
 }
-export const switchNetwork = async (props: ISwitchNetworkProps) => {
+export const switchNetwork = async (props: ISwitchNetworkProps): Promise<void> => {
   const { library, network } = props;
   if (!library || !library.provider || !library.provider.request) {
     alertService.errorAlert({ title: CONNECTION_ERROR__TITLE, message: 'Please refresh the page and try again' });

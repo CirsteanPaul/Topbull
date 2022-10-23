@@ -1,6 +1,5 @@
 import styled from '../../theme';
 import { BUBBLE_WIDTH_LARGE, BUBBLE_WIDTH_MEDIUM, BUBBLE_WIDTH_SMALL, BUBBLE_WIDTH_XSMALL } from '../../constants/styles-constants';
-import BubbleEdge from './BubbleEdge';
 
 export const BeImageLayoutLeft = styled.div`
   height: 220px;

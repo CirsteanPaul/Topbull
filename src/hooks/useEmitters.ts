@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useAppDispatch } from '../store';
 import { setAppIsScrolledAction, setAppWidthAction } from '../store/actions/app-actions';
 
-const useEmitters = () => {
+const useEmitters = (): void => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {

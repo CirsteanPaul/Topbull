@@ -6,7 +6,7 @@ import { blockchainDisconnectAsyncAction, setBlockchainWeb3ModalAction, updateBl
 import { blockchainProviderSelector } from '../store/selectors/blockchain-selectors';
 import { addMetamaskIfMissing, providerOptions } from '../utils/providerOptions';
 
-const useWeb3Modal = () => {
+const useWeb3Modal = (): void => {
   const dispatch = useAppDispatch();
   const provider = useAppSelector(blockchainProviderSelector);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

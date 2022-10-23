@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useAppSelector } from '../store';
 import { appIsNavOpen } from '../store/selectors/app-selectors';
 
-const useModalIsOpen = () => {
+const useModalIsOpen = (): void => {
   const isOpen = useAppSelector(appIsNavOpen);
 
   useEffect(() => {

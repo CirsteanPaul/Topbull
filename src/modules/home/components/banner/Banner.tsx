@@ -12,7 +12,7 @@ const Banner = (): JSX.Element => {
         <BannerText>Become a part of the future leading platform for web3 startups</BannerText>
         <BannerButtonsWrapper>
           <BannerButton to="mint">mint now</BannerButton>
-          <BannerButton to="exclusive" isHighlighted>
+          <BannerButton isHighlighted to="exclusive">
             Discover more
           </BannerButton>
         </BannerButtonsWrapper>

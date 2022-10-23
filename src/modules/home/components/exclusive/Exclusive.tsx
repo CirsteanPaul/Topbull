@@ -3,7 +3,7 @@ import { Element } from 'react-scroll';
 import ExclusiveBanner from './exclusive-banner';
 import { ExclusiveBubble, ExclusiveBubblesWrapper, ExclusiveContainer, ExclusiveTextTitle, ExclusiveTextWrapper } from './styles';
 
-const Exclusive = () => {
+const Exclusive = (): JSX.Element => {
   return (
     <ExclusiveContainer>
       <ExclusiveTextWrapper>

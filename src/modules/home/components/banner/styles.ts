@@ -135,7 +135,7 @@ export const BannerButtonsWrapper = styled.div`
   }
 `;
 
-export const BannerButton = styled(Scroll.Link).attrs(() => ({
+export const BannerButton = styled(Scroll.Link).attrs<{ isHighlighted?: boolean }>(() => ({
   spy: true,
   offset: -50,
   smooth: 'easeInOutQuint',

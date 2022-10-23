@@ -2,7 +2,7 @@ import { Backdrop, CircularProgress } from '@mui/material';
 import React from 'react';
 import LoaderProps from './types';
 
-const AppLoaderOverlay = (props: LoaderProps) => {
+const AppLoaderOverlay = (props: LoaderProps): JSX.Element => {
   const { isLoading } = props;
   if (!isLoading) {
     return null;

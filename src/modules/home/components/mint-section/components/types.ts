@@ -4,6 +4,7 @@ interface IMintCardProps {
   text: string;
   quantity: number;
   price: string;
+  isGenesis?: boolean;
 }
 
 export default IMintCardProps;

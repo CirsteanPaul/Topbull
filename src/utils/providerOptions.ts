@@ -23,7 +23,7 @@ export const providerOptions: any = {
     chainId: 1,
   },
 };
-export const addMetamaskIfMissing = () => {
+export const addMetamaskIfMissing = (): void => {
   if (!window.ethereum) {
     providerOptions['custom-metamask'] = {
       display: {

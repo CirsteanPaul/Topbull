@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../../../../../store';
 import { appSliderSelector } from '../../../../../../store/selectors/app-selectors';
 import { setAppSliderNextAction, setAppSliderSlidingAction, setAppSliderPrevAction } from '../../../../../../store/actions/app-actions';
 
-const App = () => {
+const LtToggle = (): JSX.Element => {
   const sliderInfo = useAppSelector(appSliderSelector);
   const { pos } = sliderInfo;
   const dispatch = useAppDispatch();
@@ -47,4 +47,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default LtToggle;
