@@ -10,6 +10,8 @@ type colors = {
   gray: string;
   textWhite: string;
   white: string;
+  lightGray: string;
+  darkGray: string;
 };
 type fontSize = {
   medium: string;

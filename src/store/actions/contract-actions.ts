@@ -32,6 +32,7 @@ export const fetchContractInfoActionAsync = createAsyncThunk<void, never, { stat
     thunkApi.dispatch(setBlockchainIsConnectedAction(true));
     alertService.successAlert({ title: 'Success', message: 'Contract was loaded successfully' });
   } catch (err) {
+    console.log(err);
     alertService.errorAlert({ title: 'Contract error', message: 'Contract failed loading' });
   } finally {
     thunkApi.dispatch(setContractLoadingAction(false));

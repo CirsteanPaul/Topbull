@@ -10,6 +10,7 @@ import { setContractRefferalCodeAction } from '../../store/actions/contract-acti
 import { blockchainLoadingSelector } from '../../store/selectors/blockchain-selectors';
 import { contractLoadingSelector } from '../../store/selectors/contract-selectors';
 import { getReferralFromUri } from '../../utils/convertReferralCode';
+import AffiliateProgram from './components/affiliate-program';
 import Banner from './components/banner';
 import Exclusive from './components/exclusive';
 import Faq from './components/faq';
@@ -48,6 +49,7 @@ const Home = (): JSX.Element => {
         <Faq />
       </Element>
       <Team />
+      <AffiliateProgram />
       <Footer />
     </HomeContainer>
   );
