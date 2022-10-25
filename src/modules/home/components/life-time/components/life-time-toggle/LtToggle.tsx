@@ -8,6 +8,9 @@ const LtToggle = (): JSX.Element => {
   const { pos } = sliderInfo;
   const dispatch = useAppDispatch();
   const handleClick = (id: number) => {
+    if (pos === id) {
+      return;
+    }
     if (id > pos) {
       if (id - pos >= 2) {
         dispatch(setAppSliderNextAction());
