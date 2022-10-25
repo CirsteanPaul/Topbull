@@ -160,7 +160,7 @@ export const BannerButton = styled(Scroll.Link).attrs<{ isHighlighted?: boolean 
   }
   font-size: ${props => props.theme.fontSize.small};
   @media screen and (max-width: 768px) {
-    padding: ${props => (props.isHighlighted ? '16px 20px' : '16px 36px')};
+    padding: ${props => (props.isHighlighted ? '16px 20px' : '16px 20px')};
     font-size: ${props => props.theme.fontSize.small};
 
     border-radius: 8px;

@@ -24,7 +24,6 @@ const Affiliate = (): JSX.Element => {
   const account = useAppSelector(blockchainAccountSelector);
   const handleConnect = () => {
     dispatch(fecthBlockchainDataActionAsync());
-    console.log('mint');
   };
   const generateLink = () => {
     const newLink = `https://www.topbullnft.com/${account}`;

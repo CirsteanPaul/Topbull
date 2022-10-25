@@ -11,6 +11,7 @@ import { blockchainLoadingSelector } from '../../store/selectors/blockchain-sele
 import { contractLoadingSelector } from '../../store/selectors/contract-selectors';
 import { getReferralFromUri } from '../../utils/convertReferralCode';
 import AffiliateProgram from './components/affiliate-program';
+import AppPreview from './components/app-preview';
 import Banner from './components/banner';
 import Exclusive from './components/exclusive';
 import Faq from './components/faq';
@@ -37,6 +38,7 @@ const Home = (): JSX.Element => {
       <Element name="banner">
         <Banner />
       </Element>
+      <AppPreview />
       <Exclusive />
       <LifeTime />
       <Element name="mint">

@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../../store';
 import { fecthBlockchainDataActionAsync } from '../../../../../store/actions/blockchain-actions';
 import { blockchainIsConnectedSelector } from '../../../../../store/selectors/blockchain-selectors';
-import { contractDataSelector, contractIsPresaleOpen } from '../../../../../store/selectors/contract-selectors';
+import {
+  contractDataSelector,
+  contractGetAlphaQuantitySelector,
+  contractGetGenesisQuantitySelector,
+  contractIsPresaleOpen,
+} from '../../../../../store/selectors/contract-selectors';
 import {
   McButton,
   McButtonsSection,
@@ -33,6 +38,8 @@ const MintCard = (props: IMintCardProps): JSX.Element => {
   const contractData = useAppSelector(contractDataSelector);
   const isPresale = useAppSelector(contractIsPresaleOpen);
   const isConnected = useAppSelector(blockchainIsConnectedSelector);
+  const genesisAmount = useAppSelector(contractGetGenesisQuantitySelector);
+  const alphaAmount = useAppSelector(contractGetAlphaQuantitySelector);
   const handleAddAmount = () => {
     setAmount(prev => prev + 1);
   };
@@ -59,20 +66,28 @@ const MintCard = (props: IMintCardProps): JSX.Element => {
     );
   };
   const buildQuantity = () => {
-    return `${quantity}`;
+    if (!isConnected) {
+      return `${quantity}`;
+    }
+    const { supplies } = contractData;
+    const genesisSupply = supplies.genesisOpenSupply + supplies.genesisSupply;
+    const alphaSupply = supplies.alphaOpenSupply + supplies.alphaSupply;
+    if (isGenesis) {
+      return `${genesisAmount} / ${genesisSupply}`;
+    }
+    return `${alphaAmount} / ${alphaSupply}`;
   };
 
   const buildPrice = () => {
-    let contractPrice = '';
-    if (isConnected) {
-      if (isPresale) {
-        contractPrice = isGenesis ? contractData.prices.genesisPresaleCost : contractData.prices.alphaPresaleCost;
-      } else {
-        contractPrice = isGenesis ? contractData.prices.genesisCost : contractData.prices.alphaCost;
-      }
-    }
-    if (!contractPrice) {
+    if (!isConnected) {
       return `${price} ETH`;
+    }
+    let contractPrice = '';
+
+    if (isPresale) {
+      contractPrice = isGenesis ? contractData.prices.genesisPresaleCost : contractData.prices.alphaPresaleCost;
+    } else {
+      contractPrice = isGenesis ? contractData.prices.genesisCost : contractData.prices.alphaCost;
     }
     return `${ethers.utils.formatEther(contractPrice)} ETH`;
   };
@@ -95,7 +110,15 @@ const MintCard = (props: IMintCardProps): JSX.Element => {
             </McmdpPrice>
           </McMintDetailsQuantity>
         </McMintDetails>
-        <McButtonsSection>{!isConnected ? <McButton onClick={handleConnect}>connect</McButton> : buildMintingOption()}</McButtonsSection>
+        <McButtonsSection>
+          {!isConnected ? (
+            <McButton disabled onClick={handleConnect}>
+              connect
+            </McButton>
+          ) : (
+            buildMintingOption()
+          )}
+        </McButtonsSection>
       </McInformationContainer>
       <McImage src={image} />
     </McContainer>

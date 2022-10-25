@@ -43,7 +43,6 @@ export const fecthBlockchainDataActionAsync = createAsyncThunk<void, never, { st
     thunkApi.dispatch(setBlockchainAccountAction(account._address));
     thunkApi.dispatch(setBlockchainContractAction(contract));
     thunkApi.dispatch(fetchContractInfoActionAsync());
-    // something to be fetched
   } catch (err) {
     // swallow exception
   } finally {

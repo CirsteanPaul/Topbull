@@ -2,7 +2,7 @@ import { createAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { RootState } from '..';
 import alertService from '../../services/alert-service';
 import IContractData from '../../types/IContractData';
-import { mapBigNumberToString, mapBooleanToBoolean, mapFromBigNumberToNumber, mapFromPricesToPrices } from '../../utils/map-contract-data';
+import { mapBigNumberToString, mapBooleanToBoolean, mapFromBigNumberToNumber, mapFromPricesToPrices, mapFromSuppliesToSupplies } from '../../utils/map-contract-data';
 import { CONTRACT_SET_LOADING, CONTRACT__FETCH, CONTRACT__SET_DATA, CONTRACT__SET_REFERRAL_CODE } from '../constants';
 import { blockchainAccountSelector, blockchainContractSelector } from '../selectors/blockchain-selectors';
 import { setBlockchainIsConnectedAction } from './blockchain-actions';
@@ -20,8 +20,9 @@ export const fetchContractInfoActionAsync = createAsyncThunk<void, never, { stat
     const contractData: IContractData = {
       balance: mapFromBigNumberToNumber(await contract.balanceOf(account)),
       prices: mapFromPricesToPrices(await contract.prices()),
-      // const walletOfUser = await contract.walletOfOwner(account);
       salePhase: await contract.salePhase(),
+      supplies: mapFromSuppliesToSupplies(await contract.supply()),
+      walletOfOwner: await contract.walletOfOwner(account),
       mintedNftsByUser: mapFromBigNumberToNumber(await contract.walletClaimed(account)),
       reveal: mapBooleanToBoolean(await contract.revealed()),
       maxPerWallet: mapFromBigNumberToNumber(await contract.maxPublic()),
