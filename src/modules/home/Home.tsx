@@ -51,7 +51,7 @@ const Home = (): JSX.Element => {
         <Faq />
       </Element>
       <Team />
-      <AffiliateProgram />
+      {/* <AffiliateProgram /> */}
       <Footer />
     </HomeContainer>
   );

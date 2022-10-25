@@ -31,6 +31,9 @@ const Header = (): JSX.Element => {
   const handleOpenTwitter = () => {
     window.open('https://twitter.com/TopBullNFT');
   };
+  const handleOpenMedium = () => {
+    window.open('https://medium.com/@TopBullNFT');
+  };
   const buildButton = (): JSX.Element => {
     return (
       <button style={{ zIndex: 50 }} type="button" onClick={() => dispatch(setAppIsNavOpenAction(!isOpen))} className={`${isOpen ? 'active' : ''} burger`}>
@@ -87,6 +90,7 @@ const Header = (): JSX.Element => {
         <NavLink to="faq">Faq</NavLink>
         <HeaderNavIconTwitter onClick={handleOpenTwitter} src="assets/twitter.png" />
         <HeaderNavIconDiscord onClick={handleOpenDiscord} src="assets/discord-black.png" />
+        <HeaderNavIconDiscord onClick={handleOpenMedium} src="assets/medium.png" />
       </HeaderNavContainer>
     </HeaderContainer>
   );

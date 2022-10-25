@@ -20,6 +20,9 @@ const Footer = (): JSX.Element => {
   const handleOpenTwitter = () => {
     window.open('https://twitter.com/TopBullNFT');
   };
+  const handleOpenMedium = () => {
+    window.open('https://medium.com/@TopBullNFT');
+  };
   return (
     <FooterContainer>
       <FooterPopup />
@@ -41,6 +44,7 @@ const Footer = (): JSX.Element => {
           </FooterMenuContainer>
           <FooterIcon onClick={handleOpenTwitter} src="assets/twitter.png" />
           <FooterIcon onClick={handleOpenDiscord} src="assets/discord.png" />
+          <FooterIcon onClick={handleOpenMedium} src="assets/medium.png" />
         </FooterMenuWrapper>
       </FooterWrapper>
     </FooterContainer>
