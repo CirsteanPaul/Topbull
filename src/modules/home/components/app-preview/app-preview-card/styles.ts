@@ -6,7 +6,7 @@ export const ApCardContainer = styled.div<{ isRight?: boolean }>`
   text-align: ${props => props.isRight && 'right'};
   gap: 30px;
   padding: 10px 0;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1080px) {
     flex-direction: column;
     align-items: center;
     align-self: center;
@@ -16,14 +16,14 @@ export const ApCardContainer = styled.div<{ isRight?: boolean }>`
 
 export const ApCardTitle = styled.h1`
   color: ${props => props.theme.colors.primary};
-  font-size: ${props => props.theme.fontSize.xxLarge};
+  font-size: ${props => props.theme.fontSize.large};
   font-family: ${props => props.theme.fonts.bold};
   text-transform: uppercase;
   letter-spacing: 1.4px;
   max-width: 1000px;
   position: relative;
   width: 100%;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1080px) {
     width: 80%;
     text-align: center;
     align-self: center;
@@ -49,7 +49,7 @@ export const ApCardText = styled.p<{ isRight?: boolean }>`
   width: 80%;
   align-self: ${props => (props.isRight ? 'flex-end' : 'flex-start')};
   color: ${props => props.theme.colors.white};
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1080px) {
     align-self: center;
     text-align: center;
     padding: 0 30px;
@@ -75,11 +75,12 @@ export const ApCardImage = styled.img`
   flex: 1;
   align-self: center;
   object-fit: cover;
+  width: 500px;
   @media screen and (max-width: 768px) {
     width: 400px;
   }
   @media screen and (max-width: 512px) {
-    width: 250px;
+    width: 300px;
   }
   @media screen and (max-width: 312px) {
     width: 100%;

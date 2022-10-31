@@ -38,8 +38,8 @@ const Home = (): JSX.Element => {
       <Element name="banner">
         <Banner />
       </Element>
-      <AppPreview />
       <Exclusive />
+      <AppPreview />
       <LifeTime />
       <Element name="mint">
         <MintSection />
