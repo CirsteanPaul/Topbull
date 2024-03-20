@@ -1,17 +1,9 @@
 import WalletConnect from '@walletconnect/web3-provider';
-import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
 import { providers } from 'web3modal';
 import Config from '../config';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const providerOptions: any = {
-  walletlink: {
-    package: CoinbaseWalletSDK,
-    options: {
-      appName: 'TopBull',
-      infuraId: Config.infuraKey,
-    },
-  },
   walletconnect: {
     package: WalletConnect,
     options: {
