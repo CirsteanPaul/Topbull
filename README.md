@@ -4,7 +4,7 @@ Visit the site: [TopBull](https://top-bull.netlify.app/)
 
 ## Description
 
-TopBull is a simple website application with multiple UI challenges. It is designed to integrate blockchain technologies such as Metamask, Coinbase, and Etherscan.
+TopBull is a single-page application with multiple UI challenges. It is designed to integrate blockchain technologies such as Metamask, Coinbase, and Etherscan.
 
 ## Languages and Utilities Used
 
